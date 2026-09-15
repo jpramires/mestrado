@@ -1,0 +1,85 @@
+{
+    "_index": "logs-endpoint-winevent-additional-2022.11.16",
+    "_type": "_doc",
+    "_id": "8c0acd213cc3524fc717afbc33644d9c2eb6626c",
+    "_score": 1,
+    "_source": {
+        "event_original_time": "2022-11-16T08:25:38.047Z",
+        "etl_processed_time": "2022-11-16T08:28:16.386Z",
+        "user_name": "system",
+        "PossibleCause": "Unknown",
+        "type": "wineventlog",
+        "process_id": 888,
+        "@timestamp": "2022-11-16T08:25:38.047Z",
+        "host_name": "desktop-4pvps6e.phoenix.local",
+        "level": "error",
+        "etl_host_agent_type": "winlogbeat",
+        "etl_pipeline": [
+            "all-filter-0098",
+            "all-add_processed_timestamp",
+            "fingerprint-winlogbeats7",
+            "winlogbeat_7_and_above-field_nest_cleanup",
+            "winlogbeat_7_and_above-field_cleanups",
+            "1500",
+            "1522",
+            "wmi-user_field_renames",
+            "wmi-all-extract_domain_and_user_name",
+            "general_rename-various_global_options",
+            "provider_guid-cleanup",
+            "winevent-hostname-cleanup",
+            "winevent-user_name-is-machine-account",
+            "final-cleanup-message_field"
+        ],
+        "task": "None",
+        "User": "nt authority\\system",
+        "etl_host_agent_ephemeral_uid": "f7b6d19e-5167-4483-b795-09a22efb4701",
+        "thread_id": 1672,
+        "user_domain": "nt authority",
+        "ClientMachine": "DESKTOP-4PVPS6E",
+        "@version": "1",
+        "Operation": "Start IWbemServices::ExecQuery - root\\CIMV2 : SELECT uuid FROM win32_computersystemproduct ",
+        "z_elastic_ecs": {
+            "agent": {},
+            "event": {
+                "created": "2022-11-16T08:28:14.318Z",
+                "code": "5858",
+                "provider": "Microsoft-Windows-WMI-Activity",
+                "kind": "event",
+                "action": "None"
+            },
+            "host": {},
+            "ecs": {
+                "version": "8.0.0"
+            },
+            "log": {},
+            "winlog": {
+                "process": {
+                    "thread": {}
+                }
+            },
+            "user": {
+                "type": "User",
+                "domain": "NT AUTHORITY",
+                "name": "SYSTEM",
+                "identifier": "S-1-5-18"
+            }
+        },
+        "xml_name": "Operation_ClientFailure",
+        "opcode": "Info",
+        "event_id": "5858",
+        "Component": "Unknown",
+        "ResultCode": "0x80041032",
+        "log_name": "Microsoft-Windows-WMI-Activity/Operational",
+        "ClientProcessId": "4264",
+        "record_number": 594,
+        "event_original_message": "Id = {00000000-0000-0000-0000-000000000000}; ClientMachine = DESKTOP-4PVPS6E; User = NT AUTHORITY\\SYSTEM; ClientProcessId = 4264; Component = Unknown; Operation = Start IWbemServices::ExecQuery - root\\CIMV2 : SELECT uuid FROM win32_computersystemproduct ; ResultCode = 0x80041032; PossibleCause = Unknown",
+        "provider_guid": "1418EF04-B0B4-4623-BF7E-D74AB47BBDAA",
+        "beat_name": "DESKTOP-4PVPS6E",
+        "meta_user_name_is_machine": "false",
+        "etl_host_agent_uid": "f99bee41-708a-4aa2-ad36-b5a565e36b68",
+        "source_name": "Microsoft-Windows-WMI-Activity",
+        "etl_version": "2020.04.19.01",
+        "Id": "{00000000-0000-0000-0000-000000000000}",
+        "beat_version": "8.5.0"
+    }
+}

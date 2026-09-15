@@ -1,0 +1,8 @@
+CAST(_source['EventType'] AS VARCHAR),n
+,201883292
+"""CreateKey""",295118
+"""SetValue""",91205
+"""ConnectPipe""",20384
+"""CreatePipe""",7461
+"""DeleteKey""",5496
+"""DeleteValue""",1838

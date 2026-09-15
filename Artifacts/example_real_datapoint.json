@@ -1,0 +1,77 @@
+{
+    "_index": "logs-endpoint-winevent-additional-2022.07.01",
+    "_type": "_doc",
+    "_id": "729e39cd5007321c1ad44ef30bb9785eb7ccd296",
+    "_score": 1,
+    "_source": {
+        "Status": "3221226536",
+        "z_elastic_ecs": {
+            "agent": {},
+            "ecs": {
+                "version": "8.0.0"
+            },
+            "host": {},
+            "log": {},
+            "winlog": {
+                "process": {
+                    "thread": {}
+                }
+            },
+            "event": {
+                "kind": "event",
+                "code": "3033",
+                "provider": "Microsoft-Windows-CodeIntegrity",
+                "action": "CreateSection",
+                "created": "2022-07-01T06:26:39.218Z"
+            },
+            "user": {
+                "type": "Well Known Group",
+                "domain": "NT AUTHORITY",
+                "name": "Servicio de red",
+                "identifier": "S-1-5-20"
+            }
+        },
+        "@version": "1",
+        "FileNameBuffer": "\\Device\\HarddiskVolume2\\Program Files\\Bonjour\\mdnsNSP.dll",
+        "type": "wineventlog",
+        "record_number": 50674,
+        "host_name": "computer03.domain.es",
+        "ProcessNameBuffer": "\\Device\\HarddiskVolume2\\Windows\\System32\\svchost.exe",
+        "process_id": 9644,
+        "ValidatedPolicy": "1",
+        "provider_guid": "4ee76bd8-3cf4-44a0-a0ac-3937643e37a3",
+        "level": "error",
+        "etl_version": "2020.04.19.01",
+        "ProcessNameLength": "52",
+        "beat_name": "computer03",
+        "etl_host_agent_type": "winlogbeat",
+        "etl_host_agent_ephemeral_uid": "dc80daf9-9f11-436c-8019-58ade9226dfe",
+        "source_name": "Microsoft-Windows-CodeIntegrity",
+        "etl_host_agent_uid": "b97bcabe-dfda-4497-bebf-66087835c846",
+        "event_id": "3033",
+        "task": "CreateSection",
+        "thread_id": 9708,
+        "event_original_message": "Code Integrity determined that a process (\\Device\\HarddiskVolume2\\Windows\\System32\\svchost.exe) attempted to load \\Device\\HarddiskVolume2\\Program Files\\Bonjour\\mdnsNSP.dll that did not meet the Windows signing level requirements.",
+        "event_original_time": "2022-07-01T06:08:18.663Z",
+        "etl_pipeline": [
+            "all-filter-0098",
+            "all-add_processed_timestamp",
+            "fingerprint-winlogbeats7",
+            "winlogbeat_7_and_above-field_nest_cleanup",
+            "winlogbeat_7_and_above-field_cleanups",
+            "1500",
+            "1522",
+            "general_rename-various_global_options",
+            "provider_guid-cleanup",
+            "winevent-hostname-cleanup",
+            "final-cleanup-message_field"
+        ],
+        "RequestedPolicy": "12",
+        "FileNameLength": "57",
+        "@timestamp": "2022-07-01T06:08:18.663Z",
+        "etl_processed_time": "2022-07-01T07:05:18.883Z",
+        "beat_version": "8.2.1",
+        "activity_id": "{3c00d4d7-8d10-0003-03f3-003c108dd801}",
+        "log_name": "Microsoft-Windows-CodeIntegrity/Operational"
+    }
+}
