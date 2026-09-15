@@ -1,0 +1,2 @@
+dataset,hosts_unicos,users_unicos,event_ids_unicos,processos_unicos,tecnicas_mitre,canais_log,sessoes_processo,contas_unicas,ips_origem_unicos,ips_destino_unicos
+real,18,14,237,489,56,50,213696,23,17,90

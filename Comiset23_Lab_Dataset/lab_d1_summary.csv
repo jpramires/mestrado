@@ -1,0 +1,11 @@
+,0
+total,3524864
+maliciosos,131579
+benignos,3393285
+pct_malicioso,3.733
+pct_normal,96.267
+ts_inicio,2022-11-16 08:16:54
+ts_fim,2022-11-16 23:57:42.588000
+total_fmt,"3,524,864"
+maliciosos_fmt,"131,579"
+benignos_fmt,"3,393,285"

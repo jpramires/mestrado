@@ -1,0 +1,59 @@
+tecnica_id,tecnica_nome,n_fmt,n
+"""T1036""","""Masquerading""","780,297",780297
+"""T1059.001""","""PowerShell""","414,888",414888
+"""T1543""","""Service Creation""","210,198",210198
+"""T1574.010""","""Services File Permissions Weakness""","150,061",150061
+"""T1055.001""","""Dynamic-link Library Injection""","46,660",46660
+"""T1553.004""","""Install Root Certificate""","31,911",31911
+"""T1053""","""Scheduled Task""","24,367",24367
+"""T1055""","""Process Injection""","12,831",12831
+"""T1574.002""","""DLL Side-Loading""","10,840",10840
+"""T1218.011""","""Rundll32""","8,130",8130
+"""T1059.007""","""JavaScript""","4,157",4157
+"""T1003""","""Credential Dumping""","3,383",3383
+"""T1003.002""","""Security Account Manager""","2,146",2146
+"""T1047""","""Windows Management Instrumentation""","1,931",1931
+"""T1546.001""","""Change Default File Association""","1,273",1273
+"""T1547.010""","""Boot or Logon Autostart Execution - Port Monitors""","1,161",1161
+"""Port Monitors""","""Port Monitors""",985,985
+"""T1059""","""Command-Line Interface""",876,876
+"""T1204""","""User Execution""",844,844
+"""T1547.001""","""Registry Run Keys / Start Folder""",758,758
+"""T1197""","""BITS""",678,678
+"""T1218.002""","""rundll32.exe""",672,672
+"""T1546.008""","""Accessibility Features""",642,642
+"""T1021""","""Remote Services""",593,593
+"""T1070""","""Indicator Removal on Host""",360,360
+"""T1123""","""Audio Capture""",334,334
+"""T1005""","""Data from Local System""",324,324
+"""T1187""","""Forced Authentication""",268,268
+"""1210""","""Exploitation of Remote Services""",218,218
+"""T1210""","""Exploitation of Remote Services""",199,199
+"""T1189""","""Drive-by Compromise""",197,197
+"""T1125""","""Video Capture""",184,184
+"""T1047""","""Windows Scheduled Tasks""",139,139
+"""T1571""","""Non-Standard Port""",119,119
+"""T1027""","""Obfuscated Files or Information""",118,118
+"""T1218.010""","""Regsvr32""",114,114
+"""T1055; Possible Cobalt Strike post-exploitation jobs.""",,107,107
+"""T1018""","""Remote System Discovery""",106,106
+"""T1053""","""Scheduled Tasks""",103,103
+"""T1546.012""","""Image File Execution Options Injection""",100,100
+"""T1543.003""","""Windows Service""",88,88
+"""T1218""","""Signed Binary Proxy Execution""",67,67
+"""T""",,55,55
+"""T1546.008""","""Windows Error Reporting""",53,53
+"""T1016""","""System Network Configuration Discovery""",48,48
+"""T1033""","""System Owner/User Discovery""",33,33
+"""T1047""","""File System Permissions Weakness""",31,31
+"""T1056.001""","""Input Capture - Keylogging""",20,20
+"""T1049""","""System Network Connections Discovery""",19,19
+"""T1547.004""","""Winlogon Helper DLL""",5,5
+"""T1202""","""Indirect Command Execution""",4,4
+"""T1112""","""Modify Registry""",4,4
+"""T1003.004""","""LSASS Memory""",3,3
+"""T1087""","""Account Discovery""",2,2
+"""T1518.001""","""Security Software Discovery""",2,2
+"""T1105""","""Ingress Tool Transfer""",1,1
+"""T1059""","""Command and Scripting Interpreter""",1,1
+"""T1057""","""Process Discovery""",1,1

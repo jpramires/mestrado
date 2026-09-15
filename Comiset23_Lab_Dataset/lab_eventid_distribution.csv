@@ -1,0 +1,745 @@
+,event_id,canal,provedor,n,n_maliciosos,pct,pct_malicioso,n_fmt
+0,12,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,34832560,121751,69.78,0.35,"34,832,560"
+1,10,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,9963862,70181,19.96,0.7,"9,963,862"
+2,11,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,1602981,155132,3.21,9.68,"1,602,981"
+3,3,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,1197990,1175997,2.4,98.16,"1,197,990"
+4,13,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,1194974,151553,2.39,12.68,"1,194,974"
+5,18,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,397578,107,0.8,0.03,"397,578"
+6,23,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,95305,0,0.19,0.0,"95,305"
+7,2006,Microsoft-Windows-Store/Operational,Microsoft-Windows-Install-Agent,69797,0,0.14,0.0,"69,797"
+8,2,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,46409,0,0.09,0.0,"46,409"
+9,4907,Security,Microsoft-Windows-Security-Auditing,41062,0,0.08,0.0,"41,062"
+10,8001,Microsoft-Windows-Store/Operational,Microsoft-Windows-Store,40415,0,0.08,0.0,"40,415"
+11,1,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,36769,4379,0.07,11.91,"36,769"
+12,7,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,32017,27988,0.06,87.42,"32,017"
+13,22,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,17466,0,0.03,0.0,"17,466"
+14,17,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,17050,0,0.03,0.0,"17,050"
+15,2005,Microsoft-Windows-Store/Operational,Microsoft-Windows-Install-Agent,15117,0,0.03,0.0,"15,117"
+16,2004,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Microsoft-Windows-Windows Firewall With Advanced Security,9549,0,0.02,0.0,"9,549"
+17,6,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,9203,0,0.02,0.0,"9,203"
+18,5858,Microsoft-Windows-WMI-Activity/Operational,Microsoft-Windows-WMI-Activity,8400,0,0.02,0.0,"8,400"
+19,140,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,7986,0,0.02,0.0,"7,986"
+20,8011,Microsoft-Windows-Store/Operational,Microsoft-Windows-Store,7515,0,0.02,0.0,"7,515"
+21,200,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,7262,0,0.01,0.0,"7,262"
+22,100,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,7260,0,0.01,0.0,"7,260"
+23,2006,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Microsoft-Windows-Windows Firewall With Advanced Security,6855,0,0.01,0.0,"6,855"
+24,642,Application,ESENT,6529,0,0.01,0.0,"6,529"
+25,8,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,6422,6422,0.01,100.0,"6,422"
+26,201,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,6397,0,0.01,0.0,"6,397"
+27,102,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,6396,0,0.01,0.0,"6,396"
+28,8002,Microsoft-Windows-Store/Operational,Microsoft-Windows-Store,6049,0,0.01,0.0,"6,049"
+29,4624,Security,Microsoft-Windows-Security-Auditing,6009,0,0.01,0.0,"6,009"
+30,129,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,5741,0,0.01,0.0,"5,741"
+31,4799,Security,Microsoft-Windows-Security-Auditing,5552,0,0.01,0.0,"5,552"
+32,4672,Security,Microsoft-Windows-Security-Auditing,5276,0,0.01,0.0,"5,276"
+33,62171,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,4993,0,0.01,0.0,"4,993"
+34,62170,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,4975,0,0.01,0.0,"4,975"
+35,2002,Microsoft-Windows-Store/Operational,Microsoft-Windows-Install-Agent,4749,0,0.01,0.0,"4,749"
+36,8012,Microsoft-Windows-Store/Operational,Microsoft-Windows-Store,4498,0,0.01,0.0,"4,498"
+37,40,Microsoft-Windows-WindowsUpdateClient/Operational,Microsoft-Windows-WindowsUpdateClient,4227,0,0.01,0.0,"4,227"
+38,5857,Microsoft-Windows-WMI-Activity/Operational,Microsoft-Windows-WMI-Activity,3978,0,0.01,0.0,"3,978"
+39,148,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,3843,0,0.01,0.0,"3,843"
+40,5379,Security,Microsoft-Windows-Security-Auditing,3486,0,0.01,0.0,"3,486"
+41,16,System,Microsoft-Windows-Kernel-General,3325,0,0.01,0.0,"3,325"
+42,2007,Microsoft-Windows-Store/Operational,Microsoft-Windows-Install-Agent,3254,0,0.01,0.0,"3,254"
+43,5320,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,3210,0,0.01,0.0,"3,210"
+44,8010,Microsoft-Windows-Store/Operational,Microsoft-Windows-Store,3200,0,0.01,0.0,"3,200"
+45,1004,Application,Microsoft-Windows-Security-SPP,3139,0,0.01,0.0,"3,139"
+46,410,Microsoft-Windows-Kernel-PnP/Configuration,Microsoft-Windows-Kernel-PnP,2888,0,0.01,0.0,"2,888"
+47,26,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,2532,0,0.01,0.0,"2,532"
+48,62144,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,2453,0,0.0,0.0,"2,453"
+49,400,Microsoft-Windows-Kernel-PnP/Configuration,Microsoft-Windows-Kernel-PnP,2377,0,0.0,0.0,"2,377"
+50,322,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,2317,0,0.0,0.0,"2,317"
+51,132,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,2181,0,0.0,0.0,"2,181"
+52,8014,Microsoft-Windows-Store/Operational,Microsoft-Windows-Store,1961,0,0.0,0.0,"1,961"
+53,8013,Microsoft-Windows-Store/Operational,Microsoft-Windows-Store,1925,0,0.0,0.0,"1,925"
+54,8016,System,Microsoft-Windows-DNS-Client,1861,0,0.0,0.0,"1,861"
+55,62443,Microsoft-Windows-Shell-Core/AppDefaults,Microsoft-Windows-Shell-Core,1812,0,0.0,0.0,"1,812"
+56,548,Microsoft-Windows-Storage-Storport/Health,Microsoft-Windows-StorPort,1769,0,0.0,0.0,"1,769"
+57,59,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,1754,0,0.0,0.0,"1,754"
+58,4104,Microsoft-Windows-PowerShell/Operational,Microsoft-Windows-PowerShell,1579,0,0.0,0.0,"1,579"
+59,72,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,1571,0,0.0,0.0,"1,571"
+60,30810,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,1563,0,0.0,0.0,"1,563"
+61,4798,Security,Microsoft-Windows-Security-Auditing,1528,0,0.0,0.0,"1,528"
+62,4688,Security,Microsoft-Windows-Security-Auditing,1456,0,0.0,0.0,"1,456"
+63,6115,Microsoft-Windows-LiveId/Operational,Microsoft-Windows-LiveId,1345,0,0.0,0.0,"1,345"
+64,4648,Security,Microsoft-Windows-Security-Auditing,1325,0,0.0,0.0,"1,325"
+65,811,Microsoft-Windows-Winlogon/Operational,Microsoft-Windows-Winlogon,1318,0,0.0,0.0,"1,318"
+66,812,Microsoft-Windows-Winlogon/Operational,Microsoft-Windows-Winlogon,1316,0,0.0,0.0,"1,316"
+67,6,System,Microsoft-Windows-FilterManager,1307,0,0.0,0.0,"1,307"
+68,430,Microsoft-Windows-Kernel-PnP/Configuration,Microsoft-Windows-Kernel-PnP,1240,0,0.0,0.0,"1,240"
+69,600,Windows PowerShell,PowerShell,1231,0,0.0,0.0,"1,231"
+70,3,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,1198,0,0.0,0.0,"1,198"
+71,4017,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,1174,0,0.0,0.0,"1,174"
+72,7017,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,1171,0,0.0,0.0,"1,171"
+73,6116,Microsoft-Windows-LiveId/Operational,Microsoft-Windows-LiveId,1138,0,0.0,0.0,"1,138"
+74,119,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,1067,0,0.0,0.0,"1,067"
+75,114,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,1048,0,0.0,0.0,"1,048"
+76,5351,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,1037,0,0.0,0.0,"1,037"
+77,116,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,1031,0,0.0,0.0,"1,031"
+78,5117,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,1006,0,0.0,0.0,"1,006"
+79,130,System,Microsoft-Windows-Time-Service,1006,0,0.0,0.0,"1,006"
+80,4117,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,1006,0,0.0,0.0,"1,006"
+81,4797,Security,Microsoft-Windows-Security-Auditing,1003,0,0.0,0.0,"1,003"
+82,60,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,973,0,0.0,0.0,973
+83,6117,Microsoft-Windows-LiveId/Operational,Microsoft-Windows-LiveId,967,0,0.0,0.0,967
+84,28115,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,967,0,0.0,0.0,967
+85,44,System,Microsoft-Windows-WindowsUpdateClient,963,0,0.0,0.0,963
+86,8019,System,Microsoft-Windows-DNS-Client,962,0,0.0,0.0,962
+87,1014,System,Microsoft-Windows-DNS-Client,940,0,0.0,0.0,940
+88,5324,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,938,0,0.0,0.0,938
+89,2010,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Microsoft-Windows-Windows Firewall With Advanced Security,914,0,0.0,0.0,914
+90,4,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,894,0,0.0,0.0,894
+91,5061,Security,Microsoft-Windows-Security-Auditing,854,0,0.0,0.0,854
+92,800,Microsoft-Windows-TaskScheduler/Maintenance,Microsoft-Windows-TaskScheduler,848,0,0.0,0.0,848
+93,325,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,837,0,0.0,0.0,837
+94,1010,Microsoft-Windows-SMBServer/Operational,Microsoft-Windows-SMBServer,795,0,0.0,0.0,795
+95,41,Microsoft-Windows-WindowsUpdateClient/Operational,Microsoft-Windows-WindowsUpdateClient,787,0,0.0,0.0,787
+96,258,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,774,0,0.0,0.0,774
+97,5058,Security,Microsoft-Windows-Security-Auditing,773,0,0.0,0.0,773
+98,61,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,769,0,0.0,0.0,769
+99,108,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,767,0,0.0,0.0,767
+100,6065,Microsoft-Windows-SettingSync/Debug,Microsoft-Windows-SettingSync,763,0,0.0,0.0,763
+101,440,Microsoft-Windows-Kernel-PnP/Configuration,Microsoft-Windows-Kernel-PnP,749,0,0.0,0.0,749
+102,332,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,742,0,0.0,0.0,742
+103,117,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,742,0,0.0,0.0,742
+104,16384,Application,Microsoft-Windows-Security-SPP,734,0,0.0,0.0,734
+105,4634,Security,Microsoft-Windows-Security-Auditing,725,0,0.0,0.0,725
+106,40961,System,LsaSrv,723,0,0.0,0.0,723
+107,2024,Microsoft-Windows-LiveId/Operational,Microsoft-Windows-LiveId,668,0,0.0,0.0,668
+108,107,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,662,0,0.0,0.0,662
+109,5,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,660,0,0.0,0.0,660
+110,26,Microsoft-Windows-WindowsUpdateClient/Operational,Microsoft-Windows-WindowsUpdateClient,649,0,0.0,0.0,649
+111,8000,Microsoft-Windows-Store/Operational,Microsoft-Windows-Store,644,0,0.0,0.0,644
+112,15,Application,SecurityCenter,629,0,0.0,0.0,629
+113,7040,System,Service Control Manager,624,0,0.0,0.0,624
+114,227,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,621,0,0.0,0.0,621
+115,30812,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,619,0,0.0,0.0,619
+116,63,Application,Microsoft-Windows-WMI,615,0,0.0,0.0,615
+117,9708,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,602,0,0.0,0.0,602
+118,9707,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,602,0,0.0,0.0,602
+119,43,System,Microsoft-Windows-WindowsUpdateClient,587,0,0.0,0.0,587
+120,19,System,Microsoft-Windows-WindowsUpdateClient,569,0,0.0,0.0,569
+121,5116,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,560,0,0.0,0.0,560
+122,4115,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,560,0,0.0,0.0,560
+123,5321,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,560,0,0.0,0.0,560
+124,4116,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,560,0,0.0,0.0,560
+125,16394,Application,Microsoft-Windows-Security-SPP,550,0,0.0,0.0,550
+126,8015,System,Microsoft-Windows-DNS-Client,542,0,0.0,0.0,542
+127,1012,Microsoft-Windows-SMBServer/Operational,Microsoft-Windows-SMBServer,530,0,0.0,0.0,530
+128,2003,Microsoft-Windows-Store/Operational,Microsoft-Windows-Install-Agent,524,0,0.0,0.0,524
+129,15,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,516,199,0.0,38.57,516
+130,4,Microsoft-Windows-Store/Operational,Windows-ApplicationModel-Store-SDK,512,0,0.0,0.0,512
+131,5340,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,492,0,0.0,0.0,492
+132,103,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,484,0,0.0,0.0,484
+133,202,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,484,0,0.0,0.0,484
+134,266,Microsoft-Windows-Time-Service/Operational,Microsoft-Windows-Time-Service,483,0,0.0,0.0,483
+135,7045,System,Service Control Manager,482,0,0.0,0.0,482
+136,0,Application,edgeupdate,465,0,0.0,0.0,465
+137,118,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,465,0,0.0,0.0,465
+138,110,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,432,0,0.0,0.0,432
+139,1001,Application,Windows Error Reporting,416,0,0.0,0.0,416
+140,34,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,407,0,0.0,0.0,407
+141,32,System,e1iexpress,396,0,0.0,0.0,396
+142,1034,Application,Microsoft-Windows-Security-SPP,394,0,0.0,0.0,394
+143,1003,Application,Microsoft-Windows-Security-SPP,391,0,0.0,0.0,391
+144,5059,Security,Microsoft-Windows-Security-Auditing,390,0,0.0,0.0,390
+145,40,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,384,0,0.0,0.0,384
+146,7320,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,373,0,0.0,0.0,373
+147,1129,System,Microsoft-Windows-GroupPolicy,371,0,0.0,0.0,371
+148,209,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,365,0,0.0,0.0,365
+149,4107,System,Display,350,0,0.0,0.0,350
+150,2000,Microsoft-Windows-Store/Operational,Microsoft-Windows-Install-Agent,344,0,0.0,0.0,344
+151,9706,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,342,0,0.0,0.0,342
+152,9705,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,342,0,0.0,0.0,342
+153,261,Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational,Microsoft-Windows-TerminalServices-RemoteConnectionManager,340,0,0.0,0.0,340
+154,101,Microsoft-Windows-Windows Defender/WHC,Microsoft-Windows-Windows Defender,337,0,0.0,0.0,337
+155,141,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,332,0,0.0,0.0,332
+156,65,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,332,0,0.0,0.0,332
+157,131,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,332,0,0.0,0.0,332
+158,135,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,330,0,0.0,0.0,330
+159,28017,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,329,0,0.0,0.0,329
+160,129,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,328,0,0.0,0.0,328
+161,28018,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,327,0,0.0,0.0,327
+162,102,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,316,0,0.0,0.0,316
+163,145,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,316,0,0.0,0.0,316
+164,103,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,315,0,0.0,0.0,315
+165,549,Microsoft-Windows-Storage-Storport/Operational,Microsoft-Windows-StorPort,315,0,0.0,0.0,315
+166,101,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,309,0,0.0,0.0,309
+167,5,Microsoft-Windows-User Profile Service/Operational,Microsoft-Windows-User Profiles Service,309,0,0.0,0.0,309
+168,157,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,307,0,0.0,0.0,307
+169,10016,System,Microsoft-Windows-DistributedCOM,306,0,0.0,0.0,306
+170,328,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,306,0,0.0,0.0,306
+171,263,Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational,Microsoft-Windows-TerminalServices-RemoteConnectionManager,296,0,0.0,0.0,296
+172,30811,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,291,0,0.0,0.0,291
+173,101,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,286,0,0.0,0.0,286
+174,55,System,Microsoft-Windows-Kernel-Processor-Power,284,0,0.0,0.0,284
+175,32,System,e1i65x64,265,0,0.0,0.0,265
+176,5,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,262,0,0.0,0.0,262
+177,1067,System,Microsoft-Windows-TerminalServices-RemoteConnectionManager,260,0,0.0,0.0,260
+178,4004,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,260,0,0.0,0.0,260
+179,100,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,254,0,0.0,0.0,254
+180,1500,System,Microsoft-Windows-GroupPolicy,253,0,0.0,0.0,253
+181,8004,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,252,0,0.0,0.0,252
+182,1011,Microsoft-Windows-SMBServer/Operational,Microsoft-Windows-SMBServer,244,0,0.0,0.0,244
+183,144,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,243,0,0.0,0.0,243
+184,30813,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,240,0,0.0,0.0,240
+185,6113,Microsoft-Windows-LiveId/Operational,Microsoft-Windows-LiveId,240,0,0.0,0.0,240
+186,16403,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,237,0,0.0,0.0,237
+187,142,Microsoft-Windows-Ntfs/Operational,Microsoft-Windows-Ntfs,237,0,0.0,0.0,237
+188,102,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,234,0,0.0,0.0,234
+189,900,Application,Microsoft-Windows-Security-SPP,234,0,0.0,0.0,234
+190,2002,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Microsoft-Windows-Windows Firewall With Advanced Security,233,0,0.0,0.0,233
+191,28125,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,232,0,0.0,0.0,232
+192,903,Application,Microsoft-Windows-Security-SPP,224,0,0.0,0.0,224
+193,902,Application,Microsoft-Windows-Security-SPP,224,0,0.0,0.0,224
+194,1066,Application,Microsoft-Windows-Security-SPP,221,0,0.0,0.0,221
+195,41,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,211,0,0.0,0.0,211
+196,53504,Microsoft-Windows-PowerShell/Operational,Microsoft-Windows-PowerShell,207,0,0.0,0.0,207
+197,169,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,207,0,0.0,0.0,207
+198,66,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,203,0,0.0,0.0,203
+199,98,System,Microsoft-Windows-Ntfs,203,0,0.0,0.0,203
+200,159,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,202,0,0.0,0.0,202
+201,8224,Application,VSS,201,0,0.0,0.0,201
+202,6509,Microsoft-Windows-SettingSync/Debug,Microsoft-Windows-SettingSync-Desktop,200,0,0.0,0.0,200
+203,306,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,197,0,0.0,0.0,197
+204,42,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,195,0,0.0,0.0,195
+205,331,Microsoft-Windows-User Device Registration/Admin,Microsoft-Windows-User Device Registration,190,0,0.0,0.0,190
+206,504,Microsoft-Windows-Storage-Storport/Operational,Microsoft-Windows-StorPort,188,0,0.0,0.0,188
+207,101,Microsoft-Windows-SmartCard-DeviceEnum/Operational,Microsoft-Windows-SmartCard-DeviceEnum,188,0,0.0,0.0,188
+208,400,Windows PowerShell,PowerShell,185,0,0.0,0.0,185
+209,301,Application,ESENT,185,0,0.0,0.0,185
+210,30803,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,184,0,0.0,0.0,184
+211,1,System,Microsoft-Windows-Kernel-General,184,0,0.0,0.0,184
+212,5860,Microsoft-Windows-WMI-Activity/Operational,Microsoft-Windows-WMI-Activity,182,0,0.0,0.0,182
+213,6013,System,EventLog,181,0,0.0,0.0,181
+214,324,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,181,0,0.0,0.0,181
+215,272,Microsoft-Windows-Time-Service/Operational,Microsoft-Windows-Time-Service,180,0,0.0,0.0,180
+216,5721,System,NETLOGON,178,0,0.0,0.0,178
+217,106,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,178,0,0.0,0.0,178
+218,141,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,176,0,0.0,0.0,176
+219,8033,System,BROWSER,176,0,0.0,0.0,176
+220,4616,Security,Microsoft-Windows-Security-Auditing,176,0,0.0,0.0,176
+221,2011,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Microsoft-Windows-Windows Firewall With Advanced Security,176,0,0.0,0.0,176
+222,129,System,Microsoft-Windows-Time-Service,172,0,0.0,0.0,172
+223,505,Microsoft-Windows-Storage-Storport/Operational,Microsoft-Windows-StorPort,170,0,0.0,0.0,170
+224,1158,Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin,Microsoft-Windows-TerminalServices-RemoteConnectionManager,170,0,0.0,0.0,170
+225,2000,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,168,0,0.0,0.0,168
+226,104,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,166,0,0.0,0.0,166
+227,98,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,165,0,0.0,0.0,165
+228,100,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,165,0,0.0,0.0,165
+229,172,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,164,0,0.0,0.0,164
+230,30800,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,161,0,0.0,0.0,161
+231,369,Microsoft-Windows-User Device Registration/Admin,Microsoft-Windows-User Device Registration,158,0,0.0,0.0,158
+232,5007,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,156,0,0.0,0.0,156
+233,110,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,156,0,0.0,0.0,156
+234,33,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,152,0,0.0,0.0,152
+235,8003,Microsoft-Windows-Store/Operational,Microsoft-Windows-Store,150,0,0.0,0.0,150
+236,1116,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,148,0,0.0,0.0,148
+237,24,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,148,0,0.0,0.0,148
+238,310,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,147,0,0.0,0.0,147
+239,40961,Microsoft-Windows-PowerShell/Operational,Microsoft-Windows-PowerShell,145,0,0.0,0.0,145
+240,42,Microsoft-Windows-Kernel-WHEA/Operational,Microsoft-Windows-Kernel-WHEA,144,0,0.0,0.0,144
+241,100,Microsoft-Windows-Ntfs/WHC,Microsoft-Windows-Ntfs,142,0,0.0,0.0,142
+242,7026,System,Service Control Manager,142,0,0.0,0.0,142
+243,51046,System,Microsoft-Windows-DHCPv6-Client,142,0,0.0,0.0,142
+244,3,Microsoft-Windows-Kernel-ShimEngine/Operational,Microsoft-Windows-Kernel-ShimEngine,142,0,0.0,0.0,142
+245,14,System,Microsoft-Windows-Wininit,142,0,0.0,0.0,142
+246,50036,System,Microsoft-Windows-Dhcp-Client,142,0,0.0,0.0,142
+247,16962,System,Microsoft-Windows-Directory-Services-SAM,142,0,0.0,0.0,142
+248,5,Microsoft-Windows-Kernel-WHEA/Operational,Microsoft-Windows-Kernel-WHEA,142,0,0.0,0.0,142
+249,3,System,vmci,141,0,0.0,0.0,141
+250,32,System,Microsoft-Windows-Kernel-Boot,141,0,0.0,0.0,141
+251,5033,Security,Microsoft-Windows-Security-Auditing,141,0,0.0,0.0,141
+252,781,Application,Microsoft-Windows-Complus,141,0,0.0,0.0,141
+253,5024,Security,Microsoft-Windows-Security-Auditing,141,0,0.0,0.0,141
+254,6005,System,EventLog,141,0,0.0,0.0,141
+255,102,Application,ESENT,140,0,0.0,0.0,140
+256,105,Application,ESENT,140,0,0.0,0.0,140
+257,4902,Security,Microsoft-Windows-Security-Auditing,140,0,0.0,0.0,140
+258,5617,Application,Microsoft-Windows-WMI,140,0,0.0,0.0,140
+259,4608,Security,Microsoft-Windows-Security-Auditing,140,0,0.0,0.0,140
+260,32,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,140,0,0.0,0.0,140
+261,6009,System,EventLog,140,0,0.0,0.0,140
+262,25,System,Microsoft-Windows-Kernel-Boot,139,0,0.0,0.0,139
+263,20,System,Microsoft-Windows-Kernel-Boot,138,0,0.0,0.0,138
+264,27,System,Microsoft-Windows-Kernel-Boot,138,0,0.0,0.0,138
+265,12,System,Microsoft-Windows-Kernel-General,138,0,0.0,0.0,138
+266,4826,Security,Microsoft-Windows-Security-Auditing,137,0,0.0,0.0,137
+267,28019,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,137,0,0.0,0.0,137
+268,40962,Microsoft-Windows-PowerShell/Operational,Microsoft-Windows-PowerShell,137,0,0.0,0.0,137
+269,229,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,135,0,0.0,0.0,135
+270,5615,Application,Microsoft-Windows-WMI,135,0,0.0,0.0,135
+271,2,Microsoft-Windows-RemoteDesktopServices-SessionServices/Operational,Microsoft-Windows-RemoteDesktopServices-SessionServices,135,0,0.0,0.0,135
+272,1531,Application,Microsoft-Windows-User Profiles Service,135,0,0.0,0.0,135
+273,3002,Microsoft-Windows-CodeIntegrity/Operational,Microsoft-Windows-CodeIntegrity,135,0,0.0,0.0,135
+274,145,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,131,0,0.0,0.0,131
+275,142,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,130,0,0.0,0.0,130
+276,28032,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,130,0,0.0,0.0,130
+277,161,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,130,0,0.0,0.0,130
+278,6281,Security,Microsoft-Windows-Security-Auditing,130,0,0.0,0.0,130
+279,411,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,129,0,0.0,0.0,129
+280,1,Application,SecurityCenter,129,0,0.0,0.0,129
+281,254,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,128,0,0.0,0.0,128
+282,271,Application,VMUpgradeHelper,127,0,0.0,0.0,127
+283,258,Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational,Microsoft-Windows-TerminalServices-RemoteConnectionManager,126,0,0.0,0.0,126
+284,258,Application,VMUpgradeHelper,126,0,0.0,0.0,126
+285,0,Application,Service1,126,0,0.0,0.0,126
+286,4202,Application,Microsoft-Windows-MSDTC 2,126,0,0.0,0.0,126
+287,20003,System,Microsoft-Windows-UserPnp,126,0,0.0,0.0,126
+288,101,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,126,0,0.0,0.0,126
+289,1136,Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational,Microsoft-Windows-TerminalServices-RemoteConnectionManager,125,0,0.0,0.0,125
+290,0,Application,Wondershare InstallAssist,125,0,0.0,0.0,125
+291,111,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,125,0,0.0,0.0,125
+292,2004,Microsoft-Windows-Store/Operational,Windows-ApplicationModel-Store-SDK,124,0,0.0,0.0,124
+293,67,Microsoft-Windows-User Profile Service/Operational,Microsoft-Windows-User Profiles Service,124,0,0.0,0.0,124
+294,318,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,124,0,0.0,0.0,124
+295,105,Application,VMTools,123,0,0.0,0.0,123
+296,24,System,Microsoft-Windows-Kernel-General,123,0,0.0,0.0,123
+297,1003,Application,Microsoft-Windows-Search,123,0,0.0,0.0,123
+298,208,Microsoft-Windows-Kernel-Boot/Operational,Microsoft-Windows-Kernel-Boot,122,0,0.0,0.0,122
+299,4,Microsoft-Windows-Kernel-ShimEngine/Operational,Microsoft-Windows-Kernel-ShimEngine,122,0,0.0,0.0,122
+300,1000,Application,Microsoft-Windows-LoadPerf,122,0,0.0,0.0,122
+301,1,Microsoft-Windows-User Profile Service/Operational,Microsoft-Windows-User Profiles Service,121,0,0.0,0.0,121
+302,552,Microsoft-Windows-Storage-Storport/Operational,Microsoft-Windows-StorPort,121,0,0.0,0.0,121
+303,553,Microsoft-Windows-Storage-Storport/Operational,Microsoft-Windows-StorPort,121,0,0.0,0.0,121
+304,6339,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,120,0,0.0,0.0,120
+305,5861,Microsoft-Windows-WMI-Activity/Operational,Microsoft-Windows-WMI-Activity,120,0,0.0,0.0,120
+306,21,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,120,0,0.0,0.0,120
+307,5859,Microsoft-Windows-WMI-Activity/Operational,Microsoft-Windows-WMI-Activity,120,0,0.0,0.0,120
+308,4126,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,119,0,0.0,0.0,119
+309,220,Microsoft-Windows-User Device Registration/Admin,Microsoft-Windows-User Device Registration,119,0,0.0,0.0,119
+310,5126,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,119,0,0.0,0.0,119
+311,8001,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,119,0,0.0,0.0,119
+312,4001,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,119,0,0.0,0.0,119
+313,5313,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,119,0,0.0,0.0,119
+314,5312,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,119,0,0.0,0.0,119
+315,5257,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,119,0,0.0,0.0,119
+316,7001,System,Microsoft-Windows-Winlogon,119,0,0.0,0.0,119
+317,8000,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,119,0,0.0,0.0,119
+318,5311,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,119,0,0.0,0.0,119
+319,304,Microsoft-Windows-User Device Registration/Admin,Microsoft-Windows-User Device Registration,119,0,0.0,0.0,119
+320,263,Microsoft-Windows-Time-Service/Operational,Microsoft-Windows-Time-Service,119,0,0.0,0.0,119
+321,307,Microsoft-Windows-User Device Registration/Admin,Microsoft-Windows-User Device Registration,119,0,0.0,0.0,119
+322,2,Microsoft-Windows-User Profile Service/Operational,Microsoft-Windows-User Profiles Service,119,0,0.0,0.0,119
+323,326,Application,ESENT,118,0,0.0,0.0,118
+324,22,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,117,0,0.0,0.0,117
+325,6004,Microsoft-Windows-Store/Operational,Microsoft-Windows-Push-To-Install-Service,115,0,0.0,0.0,115
+326,4000,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,114,0,0.0,0.0,114
+327,5322,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,114,0,0.0,0.0,114
+328,1,Microsoft-Windows-CloudStore/Operational,Microsoft-Windows-CloudStore,114,0,0.0,0.0,114
+329,2002,Microsoft-Windows-Store/Operational,Windows-ApplicationModel-Store-SDK,111,0,0.0,0.0,111
+330,142,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,111,0,0.0,0.0,111
+331,18,System,Microsoft-Windows-Kernel-Boot,110,0,0.0,0.0,110
+332,1117,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,110,0,0.0,0.0,110
+333,3013,Microsoft-Windows-CloudStore/Operational,Microsoft-Windows-CloudStore,109,0,0.0,0.0,109
+334,203,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,108,0,0.0,0.0,108
+335,1001,Application,Microsoft-Windows-LoadPerf,106,0,0.0,0.0,106
+336,20521,Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin,Microsoft-Windows-TerminalServices-RemoteConnectionManager,104,0,0.0,0.0,104
+337,5382,Security,Microsoft-Windows-Security-Auditing,103,0,0.0,0.0,103
+338,1151,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,102,0,0.0,0.0,102
+339,329,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,100,0,0.0,0.0,100
+340,400,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,98,0,0.0,0.0,98
+341,330,Application,ESENT,98,0,0.0,0.0,98
+342,700,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,96,0,0.0,0.0,96
+343,8025,Microsoft-Windows-HelloForBusiness/Operational,Microsoft-Windows-HelloForBusiness,96,0,0.0,0.0,96
+344,4,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,96,0,0.0,0.0,96
+345,403,Windows PowerShell,PowerShell,94,0,0.0,0.0,94
+346,523,Microsoft-Windows-Storage-Storport/Operational,Microsoft-Windows-StorPort,94,0,0.0,0.0,94
+347,15,System,Microsoft-Windows-Kernel-General,93,0,0.0,0.0,93
+348,25,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,93,0,0.0,0.0,93
+349,28117,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,93,0,0.0,0.0,93
+350,18,System,BTHUSB,92,0,0.0,0.0,92
+351,1150,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,92,0,0.0,0.0,92
+352,28,System,BTHUSB,92,0,0.0,0.0,92
+353,31000,Microsoft-Windows-SmbClient/Security,Microsoft-Windows-SMBClient,90,0,0.0,0.0,90
+354,4104,Application,Microsoft-Windows-MSDTC Client 2,90,0,0.0,0.0,90
+355,4625,Application,Microsoft-Windows-EventSystem,90,0,0.0,0.0,90
+356,24,Application,Microsoft-Windows-WMI,90,0,0.0,0.0,90
+357,302,Application,ESENT,89,0,0.0,0.0,89
+358,300,Application,ESENT,89,0,0.0,0.0,89
+359,10010,System,Microsoft-Windows-DistributedCOM,88,0,0.0,0.0,88
+360,557,Microsoft-Windows-Storage-Storport/Operational,Microsoft-Windows-StorPort,87,0,0.0,0.0,87
+361,40970,System,LsaSrv,86,0,0.0,0.0,86
+362,118,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,86,0,0.0,0.0,86
+363,1074,System,User32,84,0,0.0,0.0,84
+364,8198,Application,Microsoft-Windows-Security-SPP,83,0,0.0,0.0,83
+365,235,Microsoft-Windows-Kernel-Boot/Operational,Microsoft-Windows-Kernel-Boot,82,0,0.0,0.0,82
+366,6586,Microsoft-Windows-SettingSync/Debug,Microsoft-Windows-SettingSync,82,0,0.0,0.0,82
+367,6587,Microsoft-Windows-SettingSync/Debug,Microsoft-Windows-SettingSync,82,0,0.0,0.0,82
+368,1104,Microsoft-Windows-AAD/Operational,Microsoft-Windows-AAD,81,0,0.0,0.0,81
+369,1089,Microsoft-Windows-AAD/Operational,Microsoft-Windows-AAD,81,0,0.0,0.0,81
+370,51,Microsoft-Windows-Kernel-Boot/Operational,Microsoft-Windows-Kernel-Boot,81,0,0.0,0.0,81
+371,27,System,e1iexpress,80,0,0.0,0.0,80
+372,2,Microsoft-Windows-Kernel-EventTracing/Admin,Microsoft-Windows-Kernel-EventTracing,78,0,0.0,0.0,78
+373,54,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,78,0,0.0,0.0,78
+374,103,Microsoft-Windows-SmartCard-DeviceEnum/Operational,Microsoft-Windows-SmartCard-DeviceEnum,77,0,0.0,0.0,77
+375,228,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,77,0,0.0,0.0,77
+376,1000,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,76,0,0.0,0.0,76
+377,1,Setup,Microsoft-Windows-Servicing,75,0,0.0,0.0,75
+378,71,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,75,0,0.0,0.0,75
+379,4097,Application,Microsoft-Windows-CAPI2,74,0,0.0,0.0,74
+380,6114,Microsoft-Windows-LiveId/Operational,Microsoft-Windows-LiveId,74,0,0.0,0.0,74
+381,5719,System,NETLOGON,74,0,0.0,0.0,74
+382,153,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,73,0,0.0,0.0,73
+383,5611,Application,Microsoft-Windows-WMI,72,0,0.0,0.0,72
+384,12,System,Microsoft-Windows-UserModePowerService,72,0,0.0,0.0,72
+385,6008,System,EventLog,71,0,0.0,0.0,71
+386,41,System,Microsoft-Windows-Kernel-Power,71,0,0.0,0.0,71
+387,317,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,70,0,0.0,0.0,70
+388,1,System,Microsoft-Windows-FilterManager,70,0,0.0,0.0,70
+389,310,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,70,0,0.0,0.0,70
+390,319,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,69,0,0.0,0.0,69
+391,5973,Application,Microsoft-Windows-Immersive-Shell,68,0,0.0,0.0,68
+392,334,Microsoft-Windows-User Device Registration/Admin,Microsoft-Windows-User Device Registration,68,0,0.0,0.0,68
+393,104,Microsoft-Windows-SmartCard-DeviceEnum/Operational,Microsoft-Windows-SmartCard-DeviceEnum,68,0,0.0,0.0,68
+394,314,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,68,0,0.0,0.0,68
+395,5520,Microsoft-Windows-HelloForBusiness/Operational,Microsoft-Windows-HelloForBusiness,68,0,0.0,0.0,68
+396,6524,Microsoft-Windows-SettingSync/Debug,Microsoft-Windows-SettingSync,68,0,0.0,0.0,68
+397,808,Microsoft-Windows-TaskScheduler/Maintenance,Microsoft-Windows-TaskScheduler,67,0,0.0,0.0,67
+398,2,Microsoft-Windows-Store/Operational,Windows-ApplicationModel-Store-SDK,66,0,0.0,0.0,66
+399,1101,Security,Microsoft-Windows-Eventlog,66,0,0.0,0.0,66
+400,20001,System,Microsoft-Windows-UserPnp,66,0,0.0,0.0,66
+401,2028,Microsoft-Windows-LiveId/Operational,Microsoft-Windows-LiveId,66,0,0.0,0.0,66
+402,9027,Application,Desktop Window Manager,66,0,0.0,0.0,66
+403,36,Microsoft-Windows-TerminalServices-PnPDevices/Admin,Microsoft-Windows-TerminalServices-PnPDevices,66,0,0.0,0.0,66
+404,36,Microsoft-Windows-TerminalServices-ServerUSBDevices/Admin,Microsoft-Windows-TerminalServices-ServerUSBDevices,66,0,0.0,0.0,66
+405,2,Microsoft-Windows-Winlogon/Operational,Microsoft-Windows-Winlogon,65,0,0.0,0.0,65
+406,23,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,65,0,0.0,0.0,65
+407,1,Microsoft-Windows-Winlogon/Operational,Microsoft-Windows-Winlogon,65,0,0.0,0.0,65
+408,4647,Security,Microsoft-Windows-Security-Auditing,65,0,0.0,0.0,65
+409,4,Microsoft-Windows-User Profile Service/Operational,Microsoft-Windows-User Profiles Service,63,0,0.0,0.0,63
+410,301,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,63,0,0.0,0.0,63
+411,3,Microsoft-Windows-User Profile Service/Operational,Microsoft-Windows-User Profiles Service,63,0,0.0,0.0,63
+412,1,Microsoft-Windows-RemoteDesktopServices-SessionServices/Operational,Microsoft-Windows-RemoteDesktopServices-SessionServices,62,0,0.0,0.0,62
+413,543,Microsoft-Windows-Storage-Storport/Health,Microsoft-Windows-StorPort,61,0,0.0,0.0,61
+414,3085,Microsoft-Windows-CodeIntegrity/Operational,Microsoft-Windows-CodeIntegrity,61,0,0.0,0.0,61
+415,172,System,Microsoft-Windows-Kernel-Power,61,0,0.0,0.0,61
+416,16,System,Microsoft-Windows-HAL,61,0,0.0,0.0,61
+417,20,System,Microsoft-Windows-Kernel-General,61,0,0.0,0.0,61
+418,2000,Microsoft-Windows-WebAuthN/Operational,Microsoft-Windows-WebAuthN,61,0,0.0,0.0,61
+419,16977,System,Microsoft-Windows-Directory-Services-SAM,61,0,0.0,0.0,61
+420,50103,System,Microsoft-Windows-Dhcp-Client,61,0,0.0,0.0,61
+421,257,Microsoft-Windows-Time-Service/Operational,Microsoft-Windows-Time-Service,61,0,0.0,0.0,61
+422,7002,System,Microsoft-Windows-Winlogon,61,0,0.0,0.0,61
+423,238,System,Microsoft-Windows-Kernel-Boot,60,0,0.0,0.0,60
+424,153,System,Microsoft-Windows-Kernel-Boot,59,0,0.0,0.0,59
+425,4696,Security,Microsoft-Windows-Security-Auditing,59,0,0.0,0.0,59
+426,641,Application,ESENT,59,0,0.0,0.0,59
+427,30801,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,59,0,0.0,0.0,59
+428,1002,Microsoft-Windows-Storsvc/Diagnostic,Microsoft-Windows-Storsvc,58,0,0.0,0.0,58
+429,1008,Application,Microsoft-Windows-Perflib,58,0,0.0,0.0,58
+430,31001,Microsoft-Windows-SmbClient/Security,Microsoft-Windows-SMBClient,58,0,0.0,0.0,58
+431,4,Microsoft-Windows-Kernel-EventTracing/Admin,Microsoft-Windows-Kernel-EventTracing,57,0,0.0,0.0,57
+432,3,Microsoft-Windows-Kernel-EventTracing/Admin,Microsoft-Windows-Kernel-EventTracing,56,0,0.0,0.0,56
+433,7000,System,Service Control Manager,56,0,0.0,0.0,56
+434,1001,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,56,0,0.0,0.0,56
+435,226,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,55,0,0.0,0.0,55
+436,1530,Application,Microsoft-Windows-User Profiles Service,54,0,0.0,0.0,54
+437,4625,Security,Microsoft-Windows-Security-Auditing,54,0,0.0,0.0,54
+438,163,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,53,0,0.0,0.0,53
+439,27,System,e1i65x64,53,0,0.0,0.0,53
+440,1097,Microsoft-Windows-AAD/Operational,Microsoft-Windows-AAD,51,0,0.0,0.0,51
+441,62164,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,49,0,0.0,0.0,49
+442,62460,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,48,0,0.0,0.0,48
+443,259,Microsoft-Windows-Time-Service/Operational,Microsoft-Windows-Time-Service,47,0,0.0,0.0,47
+444,207,Microsoft-Windows-StorageSpaces-Driver/Operational,Microsoft-Windows-StorageSpaces-Driver,46,0,0.0,0.0,46
+445,260,Microsoft-Windows-Time-Service/Operational,Microsoft-Windows-Time-Service,46,0,0.0,0.0,46
+446,1040,Application,Microsoft-Windows-Security-SPP,46,0,0.0,0.0,46
+447,20523,Microsoft-Windows-TerminalServices-RemoteConnectionManager/Operational,Microsoft-Windows-TerminalServices-RemoteConnectionManager,46,0,0.0,0.0,46
+448,5325,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,46,0,0.0,0.0,46
+449,5115,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,46,0,0.0,0.0,46
+450,255,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,46,0,0.0,0.0,46
+451,70,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,46,0,0.0,0.0,46
+452,48,System,BTHUSB,45,0,0.0,0.0,45
+453,15008,System,Microsoft-Windows-HttpEvent,45,0,0.0,0.0,45
+454,151,Microsoft-Windows-Ntfs/Operational,Microsoft-Windows-Ntfs,45,0,0.0,0.0,45
+455,2001,Microsoft-Windows-Store/Operational,Microsoft-Windows-Install-Agent,45,0,0.0,0.0,45
+456,15007,System,Microsoft-Windows-HttpEvent,45,0,0.0,0.0,45
+457,501,Microsoft-Windows-Ntfs/Operational,Microsoft-Windows-Ntfs,44,0,0.0,0.0,44
+458,143,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,44,0,0.0,0.0,44
+459,51057,System,Microsoft-Windows-DHCPv6-Client,44,0,0.0,0.0,44
+460,159,Microsoft-Windows-Ntfs/Operational,Microsoft-Windows-Ntfs,44,0,0.0,0.0,44
+461,109,System,Microsoft-Windows-Kernel-Power,42,0,0.0,0.0,42
+462,13,System,Microsoft-Windows-Kernel-General,42,0,0.0,0.0,42
+463,1532,Application,Microsoft-Windows-User Profiles Service,41,0,0.0,0.0,41
+464,6006,System,EventLog,41,0,0.0,0.0,41
+465,1100,Security,Microsoft-Windows-Eventlog,41,0,0.0,0.0,41
+466,51047,System,Microsoft-Windows-DHCPv6-Client,41,0,0.0,0.0,41
+467,50037,System,Microsoft-Windows-Dhcp-Client,41,0,0.0,0.0,41
+468,272,Application,VMUpgradeHelper,40,0,0.0,0.0,40
+469,3,Microsoft-Windows-Security-Mitigations/KernelMode,Microsoft-Windows-Security-Mitigations,40,0,0.0,0.0,40
+470,260,Application,VMUpgradeHelper,40,0,0.0,0.0,40
+471,108,Application,VMTools,40,0,0.0,0.0,40
+472,2005,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Microsoft-Windows-Windows Firewall With Advanced Security,40,0,0.0,0.0,40
+473,7031,System,Service Control Manager,40,0,0.0,0.0,40
+474,1130,Application,.NET Runtime Optimization Service,40,0,0.0,0.0,40
+475,512,Microsoft-Windows-Storage-Storport/Health,Microsoft-Windows-StorPort,39,0,0.0,0.0,39
+476,411,Microsoft-Windows-Kernel-PnP/Configuration,Microsoft-Windows-Kernel-PnP,39,0,0.0,0.0,39
+477,97,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,38,0,0.0,0.0,38
+478,7023,System,Service Control Manager,38,0,0.0,0.0,38
+479,6006,Microsoft-Windows-Store/Operational,Microsoft-Windows-Push-To-Install-Service,35,0,0.0,0.0,35
+480,154,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,35,0,0.0,0.0,35
+481,7054,Microsoft-Windows-HelloForBusiness/Operational,Microsoft-Windows-HelloForBusiness,34,0,0.0,0.0,34
+482,6506,Microsoft-Windows-SettingSync/Debug,Microsoft-Windows-SettingSync-Desktop,33,0,0.0,0.0,33
+483,3054,Microsoft-Windows-HelloForBusiness/Operational,Microsoft-Windows-HelloForBusiness,33,0,0.0,0.0,33
+484,6507,Microsoft-Windows-SettingSync/Debug,Microsoft-Windows-SettingSync-Desktop,33,0,0.0,0.0,33
+485,153,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,33,0,0.0,0.0,33
+486,360,Microsoft-Windows-User Device Registration/Admin,Microsoft-Windows-User Device Registration,32,0,0.0,0.0,32
+487,4738,Security,Microsoft-Windows-Security-Auditing,32,0,0.0,0.0,32
+488,1009,Microsoft-Windows-Dhcpv6-Client/Admin,Microsoft-Windows-DHCPv6-Client,31,0,0.0,0.0,31
+489,1534,Application,Microsoft-Windows-User Profiles Service,30,0,0.0,0.0,30
+490,159,System,Microsoft-Windows-Time-Service,30,0,0.0,0.0,30
+491,16403,System,Microsoft-Windows-Directory-Services-SAM,30,0,0.0,0.0,30
+492,111,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,30,0,0.0,0.0,30
+493,5,Application,Microsoft-Windows-Search-ProfileNotify,30,0,0.0,0.0,30
+494,26,System,Microsoft-Windows-Kernel-Boot,30,0,0.0,0.0,30
+495,16391,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,30,0,0.0,0.0,30
+496,302,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,30,0,0.0,0.0,30
+497,1013,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,29,0,0.0,0.0,29
+498,1000,Application,Application Error,29,0,0.0,0.0,29
+499,258,Application,Microsoft-Windows-Defrag,29,0,0.0,0.0,29
+500,2,Setup,Microsoft-Windows-Servicing,29,0,0.0,0.0,29
+501,10000,Application,Microsoft-Windows-RestartManager,29,0,0.0,0.0,29
+502,0,Application,Firefox Default Browser Agent,29,0,0.0,0.0,29
+503,10001,Application,Microsoft-Windows-RestartManager,29,0,0.0,0.0,29
+504,1033,Application,Microsoft-Windows-Security-SPP,28,0,0.0,0.0,28
+505,50105,System,Microsoft-Windows-Dhcp-Client,27,0,0.0,0.0,27
+506,50104,System,Microsoft-Windows-Dhcp-Client,27,0,0.0,0.0,27
+507,50106,System,Microsoft-Windows-Dhcp-Client,27,0,0.0,0.0,27
+508,643,Application,ESENT,26,0,0.0,0.0,26
+509,2001,Microsoft-Windows-WebAuthN/Operational,Microsoft-Windows-WebAuthN,26,0,0.0,0.0,26
+510,442,Microsoft-Windows-Kernel-PnP/Configuration,Microsoft-Windows-Kernel-PnP,26,0,0.0,0.0,26
+511,4122,Microsoft-Windows-BitLocker/BitLocker Management,Microsoft-Windows-BitLocker-API,24,0,0.0,0.0,24
+512,30824,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,24,0,0.0,0.0,24
+513,168,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,24,0,0.0,0.0,24
+514,402,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,23,0,0.0,0.0,23
+515,8230,Application,Microsoft-Windows-Security-SPP,22,0,0.0,0.0,22
+516,1060,Microsoft-Windows-WebAuthN/Operational,Microsoft-Windows-WebAuthN,22,0,0.0,0.0,22
+517,3036,Application,Microsoft-Windows-Search,22,0,0.0,0.0,22
+518,325,Application,ESENT,22,0,0.0,0.0,22
+519,5,Microsoft-Windows-Store/Operational,Windows-ApplicationModel-Store-SDK,21,0,0.0,0.0,21
+520,10,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,21,0,0.0,0.0,21
+521,25,Microsoft-Windows-Sysmon/Operational,Microsoft-Windows-Sysmon,21,0,0.0,0.0,21
+522,3,Microsoft-Windows-Store/Operational,Windows-ApplicationModel-Store-SDK,21,0,0.0,0.0,21
+523,62441,Microsoft-Windows-Shell-Core/AppDefaults,Microsoft-Windows-Shell-Core,21,0,0.0,0.0,21
+524,4,Setup,Microsoft-Windows-Servicing,21,0,0.0,0.0,21
+525,7038,System,Service Control Manager,20,0,0.0,0.0,20
+526,7011,System,Service Control Manager,20,0,0.0,0.0,20
+527,7009,System,Service Control Manager,19,0,0.0,0.0,19
+528,162,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,19,0,0.0,0.0,19
+529,4096,Microsoft-Windows-User Device Registration/Admin,Microsoft-Windows-User Device Registration,19,0,0.0,0.0,19
+530,106,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,19,0,0.0,0.0,19
+531,1071,Microsoft-Windows-WebAuthN/Operational,Microsoft-Windows-WebAuthN,18,0,0.0,0.0,18
+532,5004,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,18,0,0.0,0.0,18
+533,36,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,18,0,0.0,0.0,18
+534,7210,Microsoft-Windows-HelloForBusiness/Operational,Microsoft-Windows-HelloForBusiness,17,0,0.0,0.0,17
+535,257,Application,Microsoft-Windows-CAPI2,17,0,0.0,0.0,17
+536,7201,Microsoft-Windows-HelloForBusiness/Operational,Microsoft-Windows-HelloForBusiness,17,0,0.0,0.0,17
+537,6001,Application,Microsoft-Windows-Winlogon,17,0,0.0,0.0,17
+538,1002,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,17,0,0.0,0.0,17
+539,22,System,Microsoft-Windows-UserModePowerService,16,0,0.0,0.0,16
+540,115,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,16,0,0.0,0.0,16
+541,39,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,16,0,0.0,0.0,16
+542,36888,System,Schannel,16,0,0.0,0.0,16
+543,8210,Microsoft-Windows-HelloForBusiness/Operational,Microsoft-Windows-HelloForBusiness,16,0,0.0,0.0,16
+544,36874,System,Schannel,16,0,0.0,0.0,16
+545,142,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,16,0,0.0,0.0,16
+546,6323,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,16,0,0.0,0.0,16
+547,139,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,16,0,0.0,0.0,16
+548,258,Microsoft-Windows-User Device Registration/Admin,Microsoft-Windows-User Device Registration,16,0,0.0,0.0,16
+549,4879,Application,Microsoft-Windows-MSDTC Client 2,15,0,0.0,0.0,15
+550,4104,Application,Microsoft-Windows-MSDTC 2,15,0,0.0,0.0,15
+551,16389,Application,Microsoft-Windows-Security-SPP,15,0,0.0,0.0,15
+552,5,Application,Firefox Default Browser Agent,15,0,0.0,0.0,15
+553,4720,Security,Microsoft-Windows-Security-Auditing,15,0,0.0,0.0,15
+554,160,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,15,0,0.0,0.0,15
+555,6000,Application,Microsoft-Windows-Winlogon,15,0,0.0,0.0,15
+556,2005,System,Microsoft-Windows-SetupPlatform,15,0,0.0,0.0,15
+557,7001,System,Service Control Manager,15,0,0.0,0.0,15
+558,6011,System,EventLog,15,0,0.0,0.0,15
+559,4728,Security,Microsoft-Windows-Security-Auditing,15,0,0.0,0.0,15
+560,2004,System,Microsoft-Windows-Setup,15,0,0.0,0.0,15
+561,8197,Application,Microsoft-Windows-Security-SPP,15,0,0.0,0.0,15
+562,16385,System,Microsoft-Windows-Bits-Client,15,0,0.0,0.0,15
+563,8020,System,Microsoft-Windows-DNS-Client,14,0,0.0,0.0,14
+564,22082,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,14,0,0.0,0.0,14
+565,5001,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,14,0,0.0,0.0,14
+566,22083,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,14,0,0.0,0.0,14
+567,1056,System,Microsoft-Windows-TerminalServices-RemoteConnectionManager,14,0,0.0,0.0,14
+568,1008,Application,Microsoft-Windows-Search,13,0,0.0,0.0,13
+569,1005,Application,Microsoft-Windows-Search,13,0,0.0,0.0,13
+570,7030,System,Service Control Manager,13,0,0.0,0.0,13
+571,1010,Application,Microsoft-Windows-Search,13,0,0.0,0.0,13
+572,2008,Microsoft-Windows-Store/Operational,Microsoft-Windows-Install-Agent,13,0,0.0,0.0,13
+573,1501,System,Microsoft-Windows-GroupPolicy,13,0,0.0,0.0,13
+574,77,Microsoft-Windows-User Profile Service/Operational,Microsoft-Windows-User Profiles General,13,0,0.0,0.0,13
+575,6338,Microsoft-Windows-GroupPolicy/Operational,Microsoft-Windows-GroupPolicy,13,0,0.0,0.0,13
+576,614,Application,ESENT,13,0,0.0,0.0,13
+577,640,Application,ESENT,13,0,0.0,0.0,13
+578,1004,Application,Microsoft-Windows-Search,13,0,0.0,0.0,13
+579,636,Application,ESENT,13,0,0.0,0.0,13
+580,31010,Microsoft-Windows-SmbClient/Security,Microsoft-Windows-SMBClient,12,0,0.0,0.0,12
+581,10005,Application,Microsoft-Windows-RestartManager,12,0,0.0,0.0,12
+582,2033,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Microsoft-Windows-Windows Firewall With Advanced Security,11,0,0.0,0.0,11
+583,36,System,Microsoft-Windows-Time-Service,11,0,0.0,0.0,11
+584,420,Microsoft-Windows-Kernel-PnP/Configuration,Microsoft-Windows-Kernel-PnP,11,0,0.0,0.0,11
+585,107,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,11,0,0.0,0.0,11
+586,10005,System,Microsoft-Windows-DistributedCOM,11,0,0.0,0.0,11
+587,10001,System,Microsoft-Windows-DistributedCOM,11,0,0.0,0.0,11
+588,2051,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Microsoft-Windows-Windows Firewall With Advanced Security,11,0,0.0,0.0,11
+589,16983,System,Microsoft-Windows-Directory-Services-SAM,11,0,0.0,0.0,11
+590,20,System,Microsoft-Windows-WindowsUpdateClient,10,0,0.0,0.0,10
+591,551,Microsoft-Windows-SMBServer/Security,Microsoft-Windows-SMBServer,10,0,0.0,0.0,10
+592,7034,System,Service Control Manager,10,0,0.0,0.0,10
+593,257,Microsoft-Windows-User Device Registration/Admin,Microsoft-Windows-User Device Registration,9,0,0.0,0.0,9
+594,6038,System,LsaSrv,9,0,0.0,0.0,9
+595,166,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS/Operational,Microsoft-Windows-RemoteDesktopServices-RdpCoreTS,9,0,0.0,0.0,9
+596,25,Microsoft-Windows-WindowsUpdateClient/Operational,Microsoft-Windows-WindowsUpdateClient,8,0,0.0,0.0,8
+597,30804,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,8,0,0.0,0.0,8
+598,4100,Microsoft-Windows-PowerShell/Operational,Microsoft-Windows-PowerShell,8,0,0.0,0.0,8
+599,1042,Application,MsiInstaller,7,0,0.0,0.0,7
+600,5000,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,7,0,0.0,0.0,7
+601,31,Microsoft-Windows-WindowsUpdateClient/Operational,Microsoft-Windows-WindowsUpdateClient,7,0,0.0,0.0,7
+602,2,Microsoft-Windows-Security-Mitigations/KernelMode,Microsoft-Windows-Security-Mitigations,7,0,0.0,0.0,7
+603,8195,Application,System Restore,7,0,0.0,0.0,7
+604,1033,Application,MsiInstaller,7,0,0.0,0.0,7
+605,1040,Application,MsiInstaller,7,0,0.0,0.0,7
+606,1015,Application,Microsoft-Windows-Wininit,7,0,0.0,0.0,7
+607,1002,Application,Application Hang,7,0,0.0,0.0,7
+608,1009,Microsoft-Windows-SMBServer/Security,Microsoft-Windows-SMBServer,7,0,0.0,0.0,7
+609,10110,System,Microsoft-Windows-DriverFrameworks-UserMode,7,0,0.0,0.0,7
+610,10111,System,Microsoft-Windows-DriverFrameworks-UserMode,7,0,0.0,0.0,7
+611,4111,Application,Microsoft-Windows-MSDTC,7,0,0.0,0.0,7
+612,11707,Application,MsiInstaller,7,0,0.0,0.0,7
+613,134,System,NTFS,7,0,0.0,0.0,7
+614,2004,Microsoft-Windows-Store/Operational,Microsoft-Windows-Install-Agent,6,0,0.0,0.0,6
+615,26,System,Application Popup,6,0,0.0,0.0,6
+616,8196,Microsoft-Windows-PowerShell/Operational,Microsoft-Windows-PowerShell,6,0,0.0,0.0,6
+617,8018,System,Microsoft-Windows-DNS-Client,6,0,0.0,0.0,6
+618,8197,Microsoft-Windows-PowerShell/Operational,Microsoft-Windows-PowerShell,6,0,0.0,0.0,6
+619,12039,Microsoft-Windows-PowerShell/Operational,Microsoft-Windows-PowerShell,6,0,0.0,0.0,6
+620,2003,Microsoft-Windows-Windows Firewall With Advanced Security/Firewall,Microsoft-Windows-Windows Firewall With Advanced Security,6,0,0.0,0.0,6
+621,8034,System,Microsoft-Windows-DNS-Client,5,0,0.0,0.0,5
+622,129,System,stornvme,5,0,0.0,0.0,5
+623,30,System,Microsoft-Windows-Eventlog,5,0,0.0,0.0,5
+624,50068,Microsoft-Windows-Dhcp-Client/Admin,Microsoft-Windows-Dhcp-Client,5,0,0.0,0.0,5
+625,30808,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,5,0,0.0,0.0,5
+626,50034,Microsoft-Windows-Dhcp-Client/Admin,Microsoft-Windows-Dhcp-Client,5,0,0.0,0.0,5
+627,0,Application,Dwminit,5,0,0.0,0.0,5
+628,59,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,5,0,0.0,0.0,5
+629,30806,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,5,0,0.0,0.0,5
+630,6006,Application,Microsoft-Windows-Winlogon,4,0,0.0,0.0,4
+631,30805,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,4,0,0.0,0.0,4
+632,2001,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,4,0,0.0,0.0,4
+633,550,Microsoft-Windows-Storage-Storport/Operational,Microsoft-Windows-StorPort,4,0,0.0,0.0,4
+634,7043,System,Service Control Manager,4,0,0.0,0.0,4
+635,20,Microsoft-Windows-TerminalServices-LocalSessionManager/Operational,Microsoft-Windows-TerminalServices-LocalSessionManager,4,0,0.0,0.0,4
+636,10400,System,Microsoft-Windows-NDIS,4,0,0.0,0.0,4
+637,158,Microsoft-Windows-Ntfs/Operational,Microsoft-Windows-Ntfs,4,0,0.0,0.0,4
+638,30807,Microsoft-Windows-SmbClient/Connectivity,Microsoft-Windows-SMBClient,4,0,0.0,0.0,4
+639,500,Microsoft-Windows-Storage-Storport/Operational,Microsoft-Windows-StorPort,4,0,0.0,0.0,4
+640,264,Application,Microsoft-Windows-Defrag,4,0,0.0,0.0,4
+641,907,Microsoft-Windows-Kernel-PnP/Driver Watchdog,Microsoft-Windows-Kernel-PnP,4,0,0.0,0.0,4
+642,6005,Application,Microsoft-Windows-Winlogon,4,0,0.0,0.0,4
+643,906,Microsoft-Windows-Kernel-PnP/Driver Watchdog,Microsoft-Windows-Kernel-PnP,4,0,0.0,0.0,4
+644,1,Microsoft-Windows-Store/Operational,Windows-ApplicationModel-Store-SDK,3,0,0.0,0.0,3
+645,2,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,3,0,0.0,0.0,3
+646,5381,Security,Microsoft-Windows-Security-Auditing,3,0,0.0,0.0,3
+647,6,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,3,0,0.0,0.0,3
+648,8194,Microsoft-Windows-PowerShell/Operational,Microsoft-Windows-PowerShell,3,0,0.0,0.0,3
+649,11,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,3,0,0.0,0.0,3
+650,3021,Microsoft-Windows-CloudStore/Operational,Microsoft-Windows-CloudStore,3,0,0.0,0.0,3
+651,29,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,3,0,0.0,0.0,3
+652,476,Application,ESENT,3,0,0.0,0.0,3
+653,8193,Microsoft-Windows-PowerShell/Operational,Microsoft-Windows-PowerShell,3,0,0.0,0.0,3
+654,31,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,3,0,0.0,0.0,3
+655,8195,Microsoft-Windows-PowerShell/Operational,Microsoft-Windows-PowerShell,3,0,0.0,0.0,3
+656,10,Microsoft-Windows-Security-Mitigations/KernelMode,Microsoft-Windows-Security-Mitigations,3,0,0.0,0.0,3
+657,6003,Application,Microsoft-Windows-Winlogon,3,0,0.0,0.0,3
+658,2484,Application,Microsoft-Windows-Immersive-Shell,3,0,0.0,0.0,3
+659,1017,Application,Microsoft-Windows-Perflib,2,0,0.0,0.0,2
+660,33,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,2,0,0.0,0.0,2
+661,1016,Application,Microsoft-Windows-Security-SPP,2,0,0.0,0.0,2
+662,4005,Application,Microsoft-Windows-Winlogon,2,0,0.0,0.0,2
+663,3033,Microsoft-Windows-CodeIntegrity/Operational,Microsoft-Windows-CodeIntegrity,2,0,0.0,0.0,2
+664,901,Microsoft-Windows-Kernel-PnP/Driver Watchdog,Microsoft-Windows-Kernel-PnP,2,0,0.0,0.0,2
+665,1002,Microsoft-Windows-Dhcp-Client/Admin,Microsoft-Windows-Dhcp-Client,2,0,0.0,0.0,2
+666,6004,Application,Microsoft-Windows-Winlogon,2,0,0.0,0.0,2
+667,12,Microsoft-Windows-Security-Mitigations/KernelMode,Microsoft-Windows-Security-Mitigations,2,0,0.0,0.0,2
+668,32784,Microsoft-Windows-PowerShell/Operational,Microsoft-Windows-PowerShell,2,0,0.0,0.0,2
+669,3,Setup,Microsoft-Windows-Servicing,2,0,0.0,0.0,2
+670,176,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,2,0,0.0,0.0,2
+671,36887,System,Schannel,2,0,0.0,0.0,2
+672,7006,System,Service Control Manager,2,0,0.0,0.0,2
+673,30,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,2,0,0.0,0.0,2
+674,809,System,Microsoft-Windows-TaskScheduler,2,0,0.0,0.0,2
+675,175,Microsoft-Client-Licensing-Platform/Admin,Microsoft-Client-Licensing-Platform,2,0,0.0,0.0,2
+676,8,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,2,0,0.0,0.0,2
+677,1003,Application,Microsoft-Windows-Perflib,2,0,0.0,0.0,2
+678,1,Microsoft-Windows-Kernel-EventTracing/Admin,Microsoft-Windows-Kernel-EventTracing,2,0,0.0,0.0,2
+679,900,Microsoft-Windows-Kernel-PnP/Driver Watchdog,Microsoft-Windows-Kernel-PnP,2,0,0.0,0.0,2
+680,3089,Microsoft-Windows-CodeIntegrity/Operational,Microsoft-Windows-CodeIntegrity,2,0,0.0,0.0,2
+681,13,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,2,0,0.0,0.0,2
+682,8225,Application,VSS,2,0,0.0,0.0,2
+683,7022,System,Service Control Manager,2,0,0.0,0.0,2
+684,4,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,2,0,0.0,0.0,2
+685,16,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,2,0,0.0,0.0,2
+686,4008,Application,Microsoft-Windows-Winlogon,2,0,0.0,0.0,2
+687,7040,Application,Microsoft-Windows-Search,2,0,0.0,0.0,2
+688,455,Application,ESENT,2,0,0.0,0.0,2
+689,7046,System,Service Control Manager,2,0,0.0,0.0,2
+690,20498,Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin,Microsoft-Windows-TerminalServices-RemoteConnectionManager,1,0,0.0,0.0,1
+691,24576,System,Microsoft-Windows-WPDClassInstaller,1,0,0.0,0.0,1
+692,36871,System,Schannel,1,0,0.0,0.0,1
+693,2486,Application,Microsoft-Windows-Immersive-Shell,1,0,0.0,0.0,1
+694,474,Application,ESENT,1,0,0.0,0.0,1
+695,7042,Application,Microsoft-Windows-Search,1,0,0.0,0.0,1
+696,1108,Security,Microsoft-Windows-Eventlog,1,0,0.0,0.0,1
+697,1002,Application,Microsoft-Windows-Winlogon,1,0,0.0,0.0,1
+698,4109,Application,Microsoft-Windows-CAPI2,1,0,0.0,0.0,1
+699,10029,System,Microsoft-Windows-DistributedCOM,1,0,0.0,0.0,1
+700,23,System,Microsoft-Windows-Eventlog,1,0,0.0,0.0,1
+701,25,System,Microsoft-Windows-Eventlog,1,0,0.0,0.0,1
+702,308,Microsoft-Windows-Bits-Client/Operational,Microsoft-Windows-Bits-Client,1,0,0.0,0.0,1
+703,10001,System,Microsoft-Windows-DriverFrameworks-UserMode,1,0,0.0,0.0,1
+704,6210,Microsoft-Windows-HelloForBusiness/Operational,Microsoft-Windows-HelloForBusiness,1,0,0.0,0.0,1
+705,24577,System,Microsoft-Windows-WPDClassInstaller,1,0,0.0,0.0,1
+706,15,Microsoft-Windows-WinRM/Operational,Microsoft-Windows-WinRM,1,0,0.0,0.0,1
+707,8225,Application,Microsoft-Windows-Security-SPP,1,0,0.0,0.0,1
+708,909,Microsoft-Windows-Kernel-PnP/Driver Watchdog,Microsoft-Windows-Kernel-PnP,1,0,0.0,0.0,1
+709,403,Microsoft-Windows-StorageSpaces-Driver/Operational,Microsoft-Windows-StorageSpaces-Driver,1,0,0.0,0.0,1
+710,1026,Application,.NET Runtime,1,0,0.0,0.0,1
+711,13,Application,VSS,1,0,0.0,0.0,1
+712,24579,System,Microsoft-Windows-WPDClassInstaller,1,0,0.0,0.0,1
+713,1024,Microsoft-Windows-TerminalServices-RDPClient/Operational,Microsoft-Windows-TerminalServices-ClientActiveXCore,1,0,0.0,0.0,1
+714,1002,System,Microsoft-Windows-StartupRepair,1,0,0.0,0.0,1
+715,1001,System,Microsoft-Windows-WER-SystemErrorReporting,1,0,0.0,0.0,1
+716,311,Microsoft-Windows-TaskScheduler/Operational,Microsoft-Windows-TaskScheduler,1,0,0.0,0.0,1
+717,3002,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,1,0,0.0,0.0,1
+718,10000,System,Microsoft-Windows-DriverFrameworks-UserMode,1,0,0.0,0.0,1
+719,508,Application,ESENT,1,0,0.0,0.0,1
+720,4108,Application,Microsoft-Windows-CAPI2,1,0,0.0,0.0,1
+721,9812,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,1,0,0.0,0.0,1
+722,62408,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,1,0,0.0,0.0,1
+723,62409,Microsoft-Windows-Shell-Core/Operational,Microsoft-Windows-Shell-Core,1,0,0.0,0.0,1
+724,157,Microsoft-Windows-Ntfs/Operational,Microsoft-Windows-Ntfs,1,0,0.0,0.0,1
+725,908,Microsoft-Windows-Kernel-PnP/Driver Watchdog,Microsoft-Windows-Kernel-PnP,1,0,0.0,0.0,1
+726,7024,System,Service Control Manager,1,0,0.0,0.0,1
+727,1552,Application,Microsoft-Windows-User Profiles Service,1,0,0.0,0.0,1
+728,10023,Application,Microsoft-Windows-Search,1,0,0.0,0.0,1
+729,16392,System,Microsoft-Windows-Bits-Client,1,0,0.0,0.0,1
+730,1013,Setup,Microsoft-Windows-Servicing,1,0,0.0,0.0,1
+731,359,Microsoft-Windows-User Device Registration/Admin,Microsoft-Windows-User Device Registration,1,0,0.0,0.0,1
+732,1055,System,Microsoft-Windows-GroupPolicy,1,0,0.0,0.0,1
+733,161,System,volmgr,1,0,0.0,0.0,1
+734,10100,System,Microsoft-Windows-DriverFrameworks-UserMode,1,0,0.0,0.0,1
+735,6003,Microsoft-Windows-Store/Operational,Microsoft-Windows-Push-To-Install-Service,1,0,0.0,0.0,1
+736,1015,Microsoft-Windows-Windows Defender/Operational,Microsoft-Windows-Windows Defender,1,0,0.0,0.0,1
+737,507,Application,ESENT,1,0,0.0,0.0,1
+738,3,System,Virtual Disk Service,1,0,0.0,0.0,1
+739,532,Application,ESENT,1,0,0.0,0.0,1
+740,12007,Application,Firefox Default Browser Agent,1,0,0.0,0.0,1
+741,20502,Microsoft-Windows-TerminalServices-RemoteConnectionManager/Admin,Microsoft-Windows-TerminalServices-RemoteConnectionManager,1,0,0.0,0.0,1
+742,43,Application,Microsoft-Windows-WMI,1,0,0.0,0.0,1
+743,4,System,Virtual Disk Service,1,0,0.0,0.0,1

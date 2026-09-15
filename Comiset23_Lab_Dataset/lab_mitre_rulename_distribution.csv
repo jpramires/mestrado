@@ -1,0 +1,31 @@
+rule_name,n
+"""-""",47646337
+"""technique_id=T1036,technique_name=Masquerading""",780297
+"""technique_id=T1059.001,technique_name=PowerShell""",414888
+"""technique_id=T1543,technique_name=Service Creation""",210198
+"""technique_id=T1574.010,technique_name=Services File Permissions Weakness""",150061
+"""Executables""",63656
+"""technique_id=T1055.001,technique_name=Dynamic-link Library Injection""",46660
+"""technique_id=T1553.004,technique_name=Install Root Certificate""",31911
+"""technique_id=T1053,technique_name=Scheduled Task""",24367
+"""technique_id=T1055,technique_name=Process Injection""",12831
+"""technique_id=T1574.002,technique_name=DLL Side-Loading""",10840
+"""Office documents""",8990
+"""UACMe Dir Prep""",8813
+"""technique_id=T1218.011,technique_name=Rundll32""",8130
+"""other interesting files""",6014
+"""Scripts and payloads""",5614
+"""technique_id=T1059.007,technique_name=JavaScript""",4157
+"""technique_id=T1003,technique_name=Credential Dumping""",3383
+"""technique_id=T1003.002,technique_name=Security Account Manager""",2146
+"""technique_id=T1047,technique_name=Windows Management Instrumentation""",1931
+"""@{Microsoft.Windows.Photos_2019.19071.12548.0_x64__8wekyb3d8bbwe?ms-resource://Microsoft.Windows.Photos/Resources/AppStoreName}""",1570
+"""technique_id=T1546.001,technique_name=Change Default File Association""",1273
+"""technique_id=T1547.010,technique_name=Boot or Logon Autostart Execution - Port Monitors""",1161
+"""NcsiUwpApp""",1100
+"""technique_name=Outlook Server 95/98 Identity Keys""",1047
+"""technique_id=Port Monitors,technique_name=Port Monitors""",985
+"""technique_id=T1059,technique_name=Command-Line Interface""",876
+"""technique_id=T1204,technique_name=User Execution""",844
+"""technique_id=T1547.001,technique_name=Registry Run Keys / Start Folder""",758
+"""technique_id=T1197,technique_name=BITS""",678

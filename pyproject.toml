@@ -1,0 +1,26 @@
+[project]
+name = "comiset"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = "==3.12.13"
+dependencies = [
+    "duckdb>=1.5.5",
+    "jupyter>=1.1.1",
+    "jupyterlab>=4.6.3",
+    "matplotlib>=3.11.1",
+    "numpy>=2.5.2",
+    "pandas>=3.0.5",
+    "pathlib>=1.0.1",
+    "pm4py>=2.7.23.8",
+    "polars>=1.44.1",
+    "scikit-learn>=1.9.0",
+    "skpm>=0.1.0",
+]
+
+[project.scripts]
+comiset = "comiset:main"
+
+[build-system]
+requires = ["uv_build>=0.12.4,<0.13.0"]
+build-backend = "uv_build"
