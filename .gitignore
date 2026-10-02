@@ -1,5 +1,7 @@
 # Large files
 *.parquet
+Sean/*.csv
+Sean/*.parquet
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
