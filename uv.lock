@@ -246,6 +246,7 @@ dependencies = [
     { name = "pandas" },
     { name = "pm4py" },
     { name = "polars" },
+    { name = "psutil" },
     { name = "scikit-learn" },
     { name = "skpm" },
 ]
@@ -261,6 +262,7 @@ requires-dist = [
     { name = "pandas", specifier = ">=3.0.5" },
     { name = "pm4py", specifier = ">=2.7.23.8" },
     { name = "polars", specifier = ">=1.44.1" },
+    { name = "psutil", specifier = ">=7.2.2" },
     { name = "scikit-learn", specifier = ">=1.9.0" },
     { name = "skpm", specifier = ">=0.1.0" },
 ]
