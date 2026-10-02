@@ -15,4 +15,5 @@ dependencies = [
     "scikit-learn>=1.9.0",
     "pm4py>=2.7.23.8",
     "skpm>=0.1.0",
+    "graphviz>=0.21",
 ]
