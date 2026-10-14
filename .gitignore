@@ -1,7 +1,11 @@
 # Large files
 *.parquet
+*.xes
 Sean/*.csv
 Sean/*.parquet
+
+# jupyter-collaboration
+.jupyter_ystore.db
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

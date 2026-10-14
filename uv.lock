@@ -247,7 +247,9 @@ dependencies = [
     { name = "pm4py" },
     { name = "polars" },
     { name = "psutil" },
+    { name = "r4pm" },
     { name = "scikit-learn" },
+    { name = "seaborn" },
     { name = "skpm" },
 ]
 
@@ -263,7 +265,9 @@ requires-dist = [
     { name = "pm4py", specifier = ">=2.7.23.8" },
     { name = "polars", specifier = ">=1.44.1" },
     { name = "psutil", specifier = ">=7.2.2" },
+    { name = "r4pm", specifier = ">=0.6.2" },
     { name = "scikit-learn", specifier = ">=1.9.0" },
+    { name = "seaborn", specifier = ">=0.13.2" },
     { name = "skpm", specifier = ">=0.1.0" },
 ]
 
@@ -1413,6 +1417,20 @@ wheels = [
 ]
 
 [[package]]
+name = "r4pm"
+version = "0.6.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/70/28/309514d739789f16df94d334700bcab361638f8182ce5b11fdf9f737a75c/r4pm-0.6.2.tar.gz", hash = "sha256:6161a313130da2e7e84dad8d21f3b5054ecbf78d4085660fe20d22fa3fe2396e", size = 70644, upload-time = "2026-08-21T11:23:56.958Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8e/18/040b3615dba94d2f2c994d9453c7a03dcfc7c519b3263fe166d0f03fcb01/r4pm-0.6.2-cp39-abi3-macosx_10_12_x86_64.whl", hash = "sha256:78620ef2fe17956df49cf407fc05907c4a9d87a85d8e116c71075bff3d65ff3e", size = 11708740, upload-time = "2026-08-21T11:23:25.597Z" },
+    { url = "https://files.pythonhosted.org/packages/63/f8/9a98d79c966ad9469f8910d1ce03988f59e1f43440ade73b9f82ba51a883/r4pm-0.6.2-cp39-abi3-macosx_11_0_arm64.whl", hash = "sha256:ee094975df3e7dc1c928e8140c747e8d4f986be93b4fa21a6133241af3204eed", size = 11121465, upload-time = "2026-08-21T11:23:27.982Z" },
+    { url = "https://files.pythonhosted.org/packages/a1/be/06168b68e543731168e2be60b22e3fc4154f349fb8231cd4773c8fcd5895/r4pm-0.6.2-cp39-abi3-manylinux_2_28_aarch64.whl", hash = "sha256:36422c38663f90f97972e9d35f80d761812c1e5817cb5fbaca0484dd82fe99be", size = 12800727, upload-time = "2026-08-21T11:23:30.389Z" },
+    { url = "https://files.pythonhosted.org/packages/41/cc/bcbeedca0329f2b0dda70a16bef6cdb065931cd04e1234698d2b75d66e46/r4pm-0.6.2-cp39-abi3-manylinux_2_28_x86_64.whl", hash = "sha256:4194bab48f638cc2644083bdd0f3a882e6945b6321997612d86241d8975352a2", size = 12582718, upload-time = "2026-08-21T11:23:32.586Z" },
+    { url = "https://files.pythonhosted.org/packages/49/1b/37d1e659c565b70e8bdc2d8528428b631f83e8bb20ad1ed379c246bfc640/r4pm-0.6.2-cp39-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:daedb4771b138b1f8b626f9d48183bd050d342c105d1438762694112d8e2c634", size = 13491420, upload-time = "2026-08-21T11:23:34.728Z" },
+    { url = "https://files.pythonhosted.org/packages/50/24/ea9c7d897bfd7803df1391a1e7f6223f6e76a1f89d771151b330593eed38/r4pm-0.6.2-cp39-abi3-win_amd64.whl", hash = "sha256:ebfc5322dbda30bd0fb0f41d1500f1d32ea92f0741ff933c1089cabb71563d35", size = 11420531, upload-time = "2026-08-21T11:23:37.167Z" },
+]
+
+[[package]]
 name = "referencing"
 version = "0.37.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1537,6 +1555,20 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/91/4c/075e4f66471bac101141ac739e9e135549be1bae584571bd03a530c056e1/scipy-1.18.1-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:d2924a03db38dc2e848bca2fe9f077dafb891480b91a00a0963a8cf86dfc31c1", size = 37480330, upload-time = "2026-08-21T23:24:19.608Z" },
     { url = "https://files.pythonhosted.org/packages/39/e7/979fd14e75008623df31ba70d6bb144700f68feadcea042021c06a05bf82/scipy-1.18.1-cp312-cp312-win_amd64.whl", hash = "sha256:5e4d44984abc0020154ea81b247adeddcc3ac5527b975ff798bd1ba0adc513c2", size = 36658278, upload-time = "2026-08-21T23:24:25.463Z" },
     { url = "https://files.pythonhosted.org/packages/c7/0b/e1525354ff9d7d5feb6d1b31af6d14072e5c91e9607b421fa1ec889660b3/scipy-1.18.1-cp312-cp312-win_arm64.whl", hash = "sha256:d65d448389b8436493abcf629cc94ad0cf32aecaf06e1acca1de53cc795f2f12", size = 24400588, upload-time = "2026-08-21T23:24:30.579Z" },
+]
+
+[[package]]
+name = "seaborn"
+version = "0.13.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "matplotlib" },
+    { name = "numpy" },
+    { name = "pandas" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/86/59/a451d7420a77ab0b98f7affa3a1d78a313d2f7281a57afb1a34bae8ab412/seaborn-0.13.2.tar.gz", hash = "sha256:93e60a40988f4d65e9f4885df477e2fdaff6b73a9ded434c1ab356dd57eefff7", size = 1457696, upload-time = "2024-01-25T13:21:52.551Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/83/11/00d3c3dfc25ad54e731d91449895a79e4bf2384dc3ac01809010ba88f6d5/seaborn-0.13.2-py3-none-any.whl", hash = "sha256:636f8336facf092165e27924f223d3c62ca560b1f2bb5dff7ab7fad265361987", size = 294914, upload-time = "2024-01-25T13:21:49.598Z" },
 ]
 
 [[package]]
