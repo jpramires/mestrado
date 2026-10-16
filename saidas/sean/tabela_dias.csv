@@ -1,0 +1,13 @@
+﻿cenario;direcao;criterio;dia;eventos;casos;atividades
+lab;entrada;alertas;17/11/2022;0;0;0
+lab;entrada;ips_distintos;16/11/2022;2;1;2
+lab;entrada;tecnicas_distintas;18/11/2022;12;2;3
+lab;todas;alertas;17/11/2022;349280;8;4
+lab;todas;ips_distintos;18/11/2022;122489;9;5
+lab;todas;tecnicas_distintas;18/11/2022;122489;9;5
+real;entrada;alertas;05/07/2022;134;1;2
+real;entrada;ips_distintos;05/07/2022;134;1;2
+real;entrada;tecnicas_distintas;05/07/2022;134;1;2
+real;todas;alertas;05/07/2022;558;2;5
+real;todas;ips_distintos;06/07/2022;105;7;4
+real;todas;tecnicas_distintas;05/07/2022;558;2;5

@@ -1,0 +1,8 @@
+﻿cenario;direcao;dia;vertices;arestas;simplicidade;limiar_ts;complexo
+lab;entrada;16/11/2022;4;3;1.333;0.102;False
+lab;entrada;18/11/2022;5;9;0.556;0.124;False
+lab;todas;17/11/2022;6;15;0.4;0.146;False
+lab;todas;18/11/2022;7;23;0.304;0.167;False
+real;entrada;05/07/2022;4;6;0.667;0.102;False
+real;todas;05/07/2022;7;15;0.467;0.167;False
+real;todas;06/07/2022;6;12;0.5;0.146;False

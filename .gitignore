@@ -1,11 +1,25 @@
-# Large files
-*.parquet
+# ==========================================================================
+# Dados grandes e regeneráveis: refeitos rodando os notebooks sobre a COMISET.
+# O GitHub avisa acima de 50 MiB e recusa acima de 100 MiB.
+# Rede de segurança: .githooks/pre-commit recusa qualquer arquivo > 50 MiB.
+# ==========================================================================
+# dataset completo em Parquet (2,6 + 13,3 GB), gerado pelos 1.x
+dados/
+# event logs em XES (2,4 GB), 3.1
 *.xes
-saidas/sean/*.csv
-saidas/sean/*.parquet
+# recortes do 1º dia (185 MB a 1,4 GB), 2.x e 3.1
+saidas/*/*_d1*.parquet
+# event log da estratégia (b) e derivados (até 19 MB), 3.x
+saidas/lab/lab_b_*.parquet
+# alertas extraídos dos 252 M eventos (19 a 580 MB), 4
+saidas/sean/alertas_*
+# event logs do Sean sem filtro de direção (até 91 MB), 4
+saidas/sean/log_*_todas.*
 
-# jupyter-collaboration
+# Estado local do JupyterLab (Desktop e jupyter-collaboration)
+.jupyter/
 .jupyter_ystore.db
+.virtual_documents/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

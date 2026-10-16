@@ -1,0 +1,17 @@
+﻿cenario;agregacao;dia;casos;vertices;arestas;simplicidade;limiar_ts;complexo
+lab;ip_origem;17/11/2022;8;6;15;0.4;0.146;False
+lab;ip_destino;18/11/2022;6;6;16;0.375;0.146;False
+lab;par_ips;18/11/2022;7;6;17;0.353;0.146;False
+lab;host;17/11/2022;1;45;580;0.078;0.984;True
+lab;usuario;17/11/2022;5;44;520;0.085;0.962;True
+lab;programa;17/11/2022;116;38;404;0.094;0.833;True
+lab;processo;17/11/2022;1189;38;335;0.113;0.833;True
+lab;processo_alvo;16/11/2022;57;6;21;0.286;0.146;False
+real;ip_origem;05/07/2022;2;7;15;0.467;0.167;False
+real;ip_destino;05/07/2022;3;5;11;0.455;0.124;False
+real;par_ips;05/07/2022;3;5;11;0.455;0.124;False
+real;host;08/07/2022;13;36;326;0.11;0.79;True
+real;usuario;08/07/2022;53;34;296;0.115;0.747;True
+real;programa;08/07/2022;241;30;209;0.144;0.661;True
+real;processo;08/07/2022;448;29;166;0.175;0.64;True
+real;processo_alvo;08/07/2022;623;7;25;0.28;0.167;False

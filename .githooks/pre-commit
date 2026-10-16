@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Recusa o commit se algum arquivo preparado passar de 50 MiB
+# (o GitHub avisa a partir de 50 MiB e recusa o push a partir de 100 MiB).
+# Ativado com: git config core.hooksPath .githooks
+limite=$((50 * 1024 * 1024))
+bloqueou=0
+while IFS= read -r -d '' arquivo; do
+    tamanho=$(git cat-file -s ":$arquivo")   # tamanho da versão preparada (no índice)
+    if [ "$tamanho" -gt "$limite" ]; then
+        echo "BLOQUEADO: $arquivo ($((tamanho / 1024 / 1024)) MiB) passa de 50 MiB -> coloque no .gitignore"
+        bloqueou=1
+    fi
+done < <(git diff --cached --name-only --diff-filter=AM -z)
+exit $bloqueou

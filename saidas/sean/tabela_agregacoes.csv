@@ -1,0 +1,17 @@
+﻿cenario;agregacao;cobertura_%;casos_antes;casos_depois;eventos_depois;reducao_%;atividades;mediana_eventos_por_caso
+lab;ip_origem;68.6;136;41;684904;41.8;5;701.0
+lab;ip_destino;68.6;359;28;227502;80.7;4;22.5
+lab;par_ips;68.6;447;28;226493;80.7;4;19.5
+lab;host;100.0;10;10;1713654;0.0;49;151603.0
+lab;usuario;95.5;53;49;1637043;0.0;48;8439.0
+lab;programa;100.0;1398;876;1531347;10.6;45;51.5
+lab;processo;100.0;26628;7404;1585073;7.5;43;7.0
+lab;processo_alvo;4.5;7879;315;18816;75.4;4;4.0
+real;ip_origem;0.3;96;24;967;42.3;7;16.0
+real;ip_destino;0.3;185;12;422;74.8;5;5.0
+real;par_ips;0.3;333;6;387;76.9;5;4.0
+real;host;100.0;180;176;631484;0.0;52;1284.0
+real;usuario;91.4;515;400;575475;0.4;50;126.5
+real;programa;100.0;3657;1369;76124;87.9;44;8.0
+real;processo;100.0;149540;2043;45682;92.8;40;4.0
+real;processo_alvo;8.6;34387;1064;9093;83.2;6;3.0
