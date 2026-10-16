@@ -1,8 +1,8 @@
 # Large files
 *.parquet
 *.xes
-Sean/*.csv
-Sean/*.parquet
+saidas/sean/*.csv
+saidas/sean/*.parquet
 
 # jupyter-collaboration
 .jupyter_ystore.db
