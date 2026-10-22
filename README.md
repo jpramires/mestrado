@@ -19,15 +19,17 @@ Em logs de sistema, diferente de processos de negócio, não existe um identific
 
 ## 🚧 Agora: app Streamlit
 
-Atualmente, estou transformando o [Notebook 4](4_replicacao_sean.ipynb) num **app Streamlit**, que pretendo deployar em um servidor privado. A ideia é que vocês possam, **via web app**, trocar a modelagem e analisar os efeitos na hora, ao invés de se basear apenas em um notebook estático:
+O [Notebook 4](4_replicacao_sean.ipynb) virou um app Streamlit ([`app.py`](app.py)), que roda localmente e será deployado em breve. A ideia poder, **via web app**, trocar a modelagem e analisar os efeitos na hora, ao invés de se basear apenas em um notebook estático:
 
-- **cenário:** LAB, REAL ou ambos
-- **noção de caso (agregação):** IP de origem (Sean), host, usuário, processo, com ou sem corte por dia
-- **direção do tráfego:** só entrada (literal do Sean - apenas *inbound*) ou todas
-- **dia analisado:** pelos critérios do Sean (mais alertas, mais IPs, mais técnicas) ou escolhido à mão
-- **saída:** o DFG, a complexidade (critério do Sean) e os casos com suas sequências
+- **cenário:** LAB, REAL ou ambos (lado a lado)
+- **noção de caso (agregação):** as 8 da §5 do notebook (IP de origem, o do Sean; IP de destino, par de IPs, host, usuário, programa, processo, processo-alvo) ou uma combinação de colunas à mão, com ou sem corte por dia
+- **atividade:** técnica, técnica-pai, técnica + programa ou tipo de evento Sysmon
+- **direção do tráfego:** só entrada (literal do Sean, apenas *inbound*), só saída, toda conexão ou todos os alertas
+- **filtro extendido (além do Sean):** mínimo de atividades distintas por caso
+- **dia analisado:** pelos critérios do Sean (mais alertas, mais casos, mais técnicas); o dia com mais eventos; escolhido à mão; ou todos juntos
+- **saída:** o DFG (com zoom, os programas que disparam cada regra e exportação em SVG/PNG), a complexidade (pelo critério do Sean), o event log com os casos e suas sequências, as séries por dia e a comparação das 8 agregações
 
-Objetivo é usar o app para decidirmos qual modelagem seguir ou mesmos quais insights podemos obter, antes de partir para descoberta de processos e predição.
+A URL guarda a modelagem inteira: é só copiar e mandar. O objetivo é usar o app para decidir qual modelagem seguir, ou mesmo quais insights podemos obter, antes de partir para descoberta de processos e predição.
 
 ---
 
@@ -76,6 +78,11 @@ Transposição de Alvarenga et al. (2018) para a COMISET, nos dois cenários com
 ```
 ├── 1.1 .. 4_*.ipynb  notebooks, na ordem de execução
 ├── util.py           cron() (cronômetro de célula) e salvar() (parquet + csv)
+├── app.py            o app Streamlit (uv run streamlit run app.py)
+├── sean/             núcleo do webapp, sem Streamlit: modelagem, DFG, complexidade, desenho
+│   └── dados/        alertas.parquet (~12 MiB), a única fonte que o app usa, versionada (está no git)
+├── interface/        peças do app que dependem do Streamlit (tema, DFG interativo, gráficos)
+├── .streamlit/       tema do app (claro e escuro)
 ├── saidas/           tudo que os notebooks geram
 │   ├── lab/  real/   exploração (CSVs e figuras), recortes d1, event log
 │   └── sean/         alertas, event logs, DFGs e tabelas do notebook 4
@@ -91,8 +98,9 @@ Transposição de Alvarenga et al. (2018) para a COMISET, nos dois cenários com
 | [`campos_lab.md`](docs/campos_lab.md) e [`presenca_campos.xlsx`](docs/presenca_campos.xlsx) | catálogo dos campos do `_source` e a presença de cada um |
 | [`exemplo_evento_lab.json`](docs/exemplo_evento_lab.json) e [`exemplo_evento_real.json`](docs/exemplo_evento_real.json) | um exemplo de evento bruto de cada cenário |
 | [`pesquisa_ocel.md`](docs/pesquisa_ocel.md) | levantamento sobre OCEL 2.0 e construção de event logs a partir de Sysmon |
+| [`plano_app_streamlit.md`](docs/plano_app_streamlit.md) | o plano do app Streamlit e as decisões tomadas na implementação |
 
-Arquivos grandes (o dataset, os recortes `d1`, os alertas e os XES) **não estão no git**, porque são regerados pelos notebooks. As regras estão no [`.gitignore`](.gitignore).
+Arquivos grandes (como o dataset ou os recortes `d1`) **não estão no git**, porque são regerados pelos notebooks. As regras estão no [`.gitignore`](.gitignore).
 
 ---
 
@@ -116,10 +124,23 @@ git config core.hooksPath .githooks
 uv run jupyter lab
 ```
 
-1. Baixe a COMISET do [Zenodo](https://doi.org/10.5281/zenodo.15375145) e aponte o caminho do JSON nos notebooks `1.x`, que geram `dados/`.
-2. Rode os notebooks em ordem. O `4` só depende de `dados/` (`lab_events.parquet` e `real_events.parquet`).
+1. Baixe a COMISET do [Zenodo](https://doi.org/10.5281/zenodo.15375145) e aponte o caminho do JSON nos notebooks `1.x`, que geram `dados/`
+2. Rode os notebooks na ordem em que estão numerados
+    - O [notebook `4`](./4_replicacao_sean.ipynb) só depende de `dados/` (`lab_events.parquet` e `real_events.parquet`)
 
-O `uv sync` instala também o grupo `dev` (JupyterLab e widgets). Para ambientes sem Jupyter, como o servidor do Streamlit, use `uv sync --no-dev`.
+### O Webapp Streamlit
+
+O app só precisa de [`sean/dados/alertas.parquet`](sean/dados), que já vem no repositório. Ele não usa `dados/` e não precisa do Graphviz instalado (o DFG é desenhado no navegador).
+
+```bash
+uv run streamlit run app.py
+```
+
+> Bônus: o código do app (`app.py`, `util.py`, `sean/` e `interface/`) passa no Pyright em modo strict:
+
+```bash
+uv run pyright
+```
 
 ---
 
