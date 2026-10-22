@@ -1,0 +1,41 @@
+[server]
+runOnSave = true
+
+[browser]
+gatherUsageStats = false
+
+[client]
+toolbarMode = "minimal"
+
+[theme]
+font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+headingFont = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+codeFont = "JetBrains Mono:https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap"
+headingFontWeights = [700, 650, 600, 600, 600, 600]
+metricValueFontSize = "1.6rem"
+baseRadius = "0.6rem"
+showWidgetBorder = true
+chartCategoricalColors = ["#5B6CE0", "#E08A3C", "#1F9D6B", "#D9485F", "#8E6CD8", "#3AA6B9", "#C9A227", "#E06BB0", "#7A8499", "#4FA36C"]
+
+# claro e escuro definidos: o app segue o sistema por padrão ("Custom Theme Auto")
+[theme.light]
+primaryColor = "#4C5FD5"
+backgroundColor = "#FAFAFC"
+secondaryBackgroundColor = "#F0F2F8"
+textColor = "#1C1F2A"
+borderColor = "#E2E5EE"
+linkColor = "#4C5FD5"
+
+[theme.light.sidebar]
+backgroundColor = "#F3F4F9"
+
+[theme.dark]
+primaryColor = "#8B9BFF"
+backgroundColor = "#0E1016"
+secondaryBackgroundColor = "#181B24"
+textColor = "#E7E9F0"
+borderColor = "#272B37"
+linkColor = "#8B9BFF"
+
+[theme.dark.sidebar]
+backgroundColor = "#12141B"

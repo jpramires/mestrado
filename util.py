@@ -1,9 +1,13 @@
 import time
+from collections.abc import Generator
 from contextlib import contextmanager
 from pathlib import Path
 
+import pandas as pd
+
+
 @contextmanager
-def cron(nome=""):
+def cron(nome: str = "") -> Generator[None]:
     """Cronometra um bloco: with cron("etapa"): ..."""
     t0 = time.perf_counter()
     try:
@@ -23,7 +27,7 @@ def cron(nome=""):
         print(f"\n[tempo] {nome}: {tempo}\n")
 
 
-def salvar(df, caminho_sem_extensao):
+def salvar(df: pd.DataFrame, caminho_sem_extensao: str | Path) -> None:
     """Salva um `df` em parquet e em csv"""
     caminho = Path(caminho_sem_extensao)
     df.to_parquet(caminho.with_suffix(".parquet"))

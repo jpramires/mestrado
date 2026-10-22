@@ -4,7 +4,8 @@
 # Rede de segurança: .githooks/pre-commit recusa qualquer arquivo > 50 MiB.
 # ==========================================================================
 # dataset completo em Parquet (2,6 + 13,3 GB), gerado pelos 1.x
-dados/
+# (só a pasta da raiz: sean/dados/alertas.parquet, ~12 MiB, vai pro git porque o app precisa dele no deploy)
+/dados/
 # event logs em XES (2,4 GB), 3.1
 *.xes
 # recortes do 1º dia (185 MB a 1,4 GB), 2.x e 3.1

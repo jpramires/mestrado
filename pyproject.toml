@@ -16,6 +16,7 @@ dependencies = [
     "seaborn>=0.13.2",
     "r4pm>=0.6.2",
     "pyarrow>=25.0.1",
+    "streamlit>=1.66.0",
 ]
 
 [dependency-groups]
@@ -23,4 +24,15 @@ dev = [
     "ipyfilechooser>=0.6.0",
     "ipywidgets>=8.1.9",
     "jupyterlab>=4.6.3",
+    "pandas-stubs>=3.0.5.260914",
+    "pyright>=1.1.414",
 ]
+
+[tool.pyright]
+# o app e o núcleo em modo strict; o resto (os notebooks) segue no standard, como no VS Code
+include = ["app.py", "util.py", "sean", "interface"]
+typeCheckingMode = "standard"
+strict = ["app.py", "util.py", "sean", "interface"]
+pythonVersion = "3.12"
+venvPath = "."
+venv = ".venv"
