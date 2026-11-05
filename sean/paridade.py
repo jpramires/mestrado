@@ -27,7 +27,7 @@ CRITERIO_NB = {
 
 
 def data(texto: str) -> date:
-    return datetime.strptime(texto, "%d/%m/%Y").date()
+    return datetime.strptime(texto, "%d/%m/%Y").date()  # noqa: DTZ007
 
 
 def linhas(tabela: str) -> list[dict[str, Any]]:

@@ -117,10 +117,6 @@ uv sync
 ```
 
 ```bash
-git config core.hooksPath .githooks
-```
-
-```bash
 uv run jupyter lab
 ```
 
