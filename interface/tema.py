@@ -1,15 +1,17 @@
-"""Tema claro/escuro: segue o sistema por padrão, tem seletor próprio e afasta o Dark Reader."""
+"""Qual tema (claro ou escuro) está em uso, para o DFG usar as cores certas; e a trava do Dark Reader.
 
-from typing import cast
+O seletor de tema é o do próprio Streamlit (menu ⋮ > Settings). Este componente só observa a cor de fundo
+que o Streamlit aplicou, então acompanha qualquer troca na hora, em qualquer página.
+"""
 
 import streamlit as st
 from streamlit.components.v2 import component
 
 _JS = r"""
 export default function (component) {
-  const { data, setStateValue } = component;
+  const { setStateValue } = component;
 
-  // O app já tem tema escuro próprio: com esta trava, o Dark Reader não escurece a página por cima
+  // O app já tem tema escuro próprio: com estas metas, o Dark Reader não escurece a página por cima
   for (const [name, content] of [["darkreader-lock", null], ["color-scheme", "light dark"]]) {
     if (!document.head.querySelector(`meta[name="${name}"]`)) {
       const meta = document.createElement("meta");
@@ -19,86 +21,35 @@ export default function (component) {
     }
   }
 
-  // Mesma chave em que o Streamlit guarda a escolha do menu Settings > Theme
-  const chave = `stActiveTheme-${window.location.pathname}-v2`;
-  const preferencia = () => {
-    try {
-      const valor = JSON.parse(window.localStorage.getItem(chave));
-      return ["System", "Light", "Dark"].includes(valor) ? valor : "System";
-    } catch {
-      return "System";
-    }
+  const tema = () => {
+    const fundo = getComputedStyle(document.querySelector(".stApp") || document.body).backgroundColor;
+    const [r, g, b] = (fundo.match(/\d+/g) || [255, 255, 255]).map(Number);
+    return (0.2126 * r + 0.7152 * g + 0.0722 * b) / 255 < 0.5 ? "dark" : "light";
   };
-  const sistema = window.matchMedia("(prefers-color-scheme: dark)");
-  const efetivo = (p) => (p === "Dark" || (p === "System" && sistema.matches) ? "dark" : "light");
-
-  // O seletor do app pediu outro tema: grava onde o Streamlit lê e recarrega (a URL guarda a modelagem)
-  const pedido = data && data.pedido;
-  if (pedido && pedido !== preferencia()) {
-    window.localStorage.setItem(chave, JSON.stringify(pedido));
-    window.location.reload();
-    return;
-  }
-
   let ultimo = null;
   const informar = () => {
-    const p = preferencia();
-    const atual = `${p}|${efetivo(p)}`;
+    const atual = tema();
     if (atual !== ultimo) {
       ultimo = atual;
-      setStateValue("tema", { preferencia: p, efetivo: efetivo(p) });
+      setStateValue("tema", atual);
     }
   };
   informar();
-  sistema.addEventListener("change", informar);
-  const relogio = window.setInterval(informar, 1000);   // pega trocas feitas pelo menu do próprio Streamlit
-  return () => {
-    sistema.removeEventListener("change", informar);
-    window.clearInterval(relogio);
-  };
+  const relogio = window.setInterval(informar, 500);
+  return () => window.clearInterval(relogio);
 }
 """
 
 _componente = component("tema_do_app", js=_JS)
 
-OPCOES: dict[str, str] = {
-    "System": ":material/contrast: Sistema",
-    "Light": ":material/light_mode: Claro",
-    "Dark": ":material/dark_mode: Escuro",
-}
+
+def montar() -> None:
+    """Monta o componente (invisível). O `app.py` chama uma vez por execução, antes da página."""
+    resultado = _componente(key="_tema", on_tema_change=lambda: None)
+    tema = getattr(resultado, "tema", None)
+    st.session_state["_tema_em_uso"] = tema if tema in ("light", "dark") else st.context.theme.type or "light"
 
 
-def montar() -> str:
-    """Monta o componente (invisível) e devolve o tema em uso: "light" ou "dark"."""
-    resultado = _componente(
-        data={"pedido": st.session_state.get("_tema_pedido")},
-        key="_tema",
-        on_tema_change=lambda: None,
-    )
-    estado: object = getattr(resultado, "tema", None)
-    if isinstance(estado, dict):
-        # o JS manda {preferencia, efetivo}, ambos texto
-        tema_js = cast("dict[str, str]", estado)
-        st.session_state["_tema_preferencia"] = tema_js.get("preferencia", "System")
-        return tema_js.get("efetivo", "light")
-    return st.context.theme.type or "light"
-
-
-def seletor() -> None:
-    """Seletor Sistema/Claro/Escuro. Começa na escolha salva no navegador."""
-    salvo = st.session_state.get("_tema_preferencia", "System")
-    if st.session_state.get("tema") != salvo and not st.session_state.get(
-        "_tema_pedido"
-    ):
-        st.session_state["tema"] = salvo
-    st.segmented_control(
-        "Tema",
-        list(OPCOES),
-        format_func=lambda opcao: OPCOES[opcao],
-        required=True,
-        key="tema",
-        on_change=lambda: st.session_state.update(
-            _tema_pedido=st.session_state["tema"]
-        ),
-        width="stretch",
-    )
+def em_uso() -> str:
+    """O tema em uso: "light" ou "dark"."""
+    return str(st.session_state.get("_tema_em_uso", "light"))

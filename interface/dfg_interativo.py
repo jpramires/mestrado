@@ -7,11 +7,9 @@ gerado no navegador (sem precisar do `dot` no servidor), inclusive para baixar e
 import streamlit as st
 from streamlit.components.v2 import component
 
-from sean.desenho import Dot
+from comiset.desenho import Dot
 
-GRAPHVIZ_WASM = (
-    "https://cdn.jsdelivr.net/npm/@hpcc-js/wasm-graphviz@1.29.2/dist/index.js"
-)
+GRAPHVIZ_WASM = "https://cdn.jsdelivr.net/npm/@hpcc-js/wasm-graphviz@1.29.2/dist/index.js"
 
 _HTML = """
 <div class="dfg">
@@ -57,10 +55,10 @@ _JS = """
 const URL_GRAPHVIZ = "__URL__";
 
 function carregarGraphviz() {
-  if (!window.__seanGraphviz) {
-    window.__seanGraphviz = import(URL_GRAPHVIZ).then((m) => m.Graphviz.load());
+  if (!window.__graphvizWasm) {
+    window.__graphvizWasm = import(URL_GRAPHVIZ).then((m) => m.Graphviz.load());
   }
-  return window.__seanGraphviz;
+  return window.__graphvizWasm;
 }
 
 function baixar(nome, blob) {

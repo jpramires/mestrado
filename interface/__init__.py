@@ -1,1 +1,1 @@
-"""Peças do app que dependem do Streamlit (o núcleo fica em `sean/`)."""
+"""As peças do app que dependem do Streamlit (o núcleo, sem Streamlit, fica em `comiset/`)."""

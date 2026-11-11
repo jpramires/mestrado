@@ -5,7 +5,7 @@ runOnSave = true
 gatherUsageStats = false
 
 [client]
-toolbarMode = "minimal"
+toolbarMode = "viewer"  # menu ⋮ com o seletor de tema, sem as opções de desenvolvedor
 
 [theme]
 font = "Inter:https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
