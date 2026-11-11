@@ -1,6 +1,6 @@
-# Plano: app Streamlit da modelagem do Sean
+# Plano: o app Streamlit do mestrado
 
-> Planejado em 20/10/2026 e implementado no mesmo dia. A seção 8 registra o que mudou em relação ao plano.
+> A v1 foi planejada e implementada em 20/10/2026, como transposição do Notebook 4 (seções 1 a 8). A v2, de 10/11/2026, desprende o app da replicação de Alvarenga et al. (2018) e está na seção 10.
 
 **Objetivo:** um webapp em que se troca a modelagem (cenário, noção de caso, atividade, filtros, dia) e se vê na hora o que sai dela: o **DFG**, as **métricas** (as do Sean e as do log) e o **event log**. Serve para decidir qual modelagem seguir antes da descoberta de processos e da predição.
 
@@ -166,7 +166,7 @@ Como o DFG e as exportações SVG/PNG são feitos no navegador, o servidor não 
 
 ---
 
-## 9. v2 (backlog)
+## 9. Backlog
 
 - **Escolher campos dos alertas e do event log.** O arquivo do app tem ~20 colunas, e trazer um campo novo exige varrer `dados/`, o que é inviável ao vivo. O caminho é extrair offline uma tabela mais larga de alertas, com os campos de presença relevante **entre os alertas** (as tabelas de presença atuais medem todos os eventos: 74 campos com ≥ 1% no LAB e 41 no REAL), partindo das colunas `pm_core` e `ml_feature` do `lab_field_presence_annotated.csv`. No app, esses campos viram chave de caso, atividade ou atributo exibido. A complexidade fica no preparo dos dados, não na interface.
 - **Árvore de processos como caso.** O `proc_parent_guid` só existe em 0,26% dos alertas (só no EID 1), então é preciso uma tabela de linhagem (guid → pai → raiz) extraída dos ProcessCreate de `dados/`.
@@ -174,3 +174,43 @@ Como o DFG e as exportações SVG/PNG são feitos no navegador, o servidor não 
 - **Janela por hora ou por sessão** (corte por inatividade), como alternativa ao dia.
 - **Desempate por `record_number`**, reextraindo os alertas de `dados/`.
 - **Clustering** (etapa seguinte do Sean) quando o modelo for complexo.
+
+---
+
+## 10. Versão 2 (10/11/2026)
+
+O app deixa de ser "a modelagem do Sean" e passa a ser a síntese do mestrado: a noção de caso como objeto de estudo. Alvarenga et al. (2018) continua sendo a referência principal, mas como ponto de partida, não como fio condutor.
+
+**O que mudou**
+
+- **Núcleo `sean/` → `comiset/`.** Sem a paridade: o app não depende mais das tabelas salvas pelo Notebook 4. Com isso saem também o `_id` como desempate e a opção de ler os alertas originais.
+- **Duas páginas no topo.** *Explorar* é a padrão e abre direto no modelo; *Método* explica o caminho do alerta ao modelo em seis passos, a referência principal (o que vem do artigo e o que muda aqui), o critério de complexidade e os detalhes técnicos. As equações saíram da aba Complexidade.
+- **O artigo nos controles.** As escolhas de Alvarenga et al. (2018) aparecem marcadas com "(Sean)" só nos controles da barra lateral (`SEAN` em `comiset/constantes.py`); títulos, etiquetas e o DFG usam os rótulos limpos.
+- **Sem seletor de tema próprio** e sem "Voltar ao Sean literal". O tema é escolhido no menu ⋮ do Streamlit (`toolbarMode = "viewer"`); o componente de tema só lê a cor de fundo aplicada, para o DFG usar a paleta certa, e mantém a trava do Dark Reader.
+- **Código mais curto.** O `app.py` virou só a entrada (20 linhas); as telas foram para módulos pequenos em `interface/`. O Pyright roda no modo standard (era strict) e o Ruff, com linhas de até 120 caracteres.
+- **URL curta.** O `bind="query-params"` gravava o rótulo visível, com acentos (`?dir=S%C3%B3+entrada`). Agora `interface/url.py` grava a chave de cada opção (`?cen=real&agr=usuario&min=3`), só o que difere do padrão, e devolve a modelagem na volta da página Método.
+- **Mesma ordem em todo lugar.** Barra lateral, etiquetas do topo e passos do Método seguem cenário → caso → atividade → direção do tráfego → filtros → dia. A direção ganhou rótulos que dizem que só os alertas de rede têm direção ("Só conexões de entrada", "Todos os alertas").
+- **Limiar.** O `ts(V)` do artigo virou `limiar(V)` em todo o app; a página Método explica de onde vêm a reta e os limites de 12 e 25 vértices, e as referências estão em ABNT.
+
+**Arquitetura**
+
+```
+app.py                      entrada: configuração, tema, navegação (Explorar | Método)
+comiset/                    núcleo, sem Streamlit
+  constantes.py             nomes do Sysmon, correção de IDs, noções de caso, rótulos, presets do artigo
+  dados.py                  preparo de comiset/dados/alertas.parquet e conexão DuckDB
+  modelagem.py              Modelagem → SQL: universo, caso, filtro, recorte; casos e eventos
+  dfg.py                    DFG e critério de complexidade
+  desenho.py                o DFG em DOT
+  dados/alertas.parquet     ~12 MiB, versionado
+interface/                  telas (Streamlit)
+  controles.py              barra lateral → Escolhas (uma Modelagem por cenário)
+  url.py                    a modelagem na URL, com valores curtos
+  consultas.py              as consultas do núcleo, com cache
+  explorar.py               página Explorar: cabeçalho, cartões e as cinco abas
+  metodo.py                 página Método
+  dfg_interativo.py         DFG no navegador (Graphviz em WebAssembly), com zoom e exportação
+  graficos.py               plano de complexidade e séries por dia (Altair)
+  tema.py                   tema em uso e trava do Dark Reader
+  formato.py                números e datas em pt-BR
+```
