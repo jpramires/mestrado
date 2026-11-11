@@ -1,4 +1,4 @@
-"""DFG (Algoritmo 1 do Sean) e critério de complexidade (eq. 2, 5 e 6), em SQL."""
+"""O modelo de processo (DFG) e o critério de complexidade de Alvarenga et al. (2018), em SQL."""
 
 from collections.abc import Sequence
 from dataclasses import dataclass
@@ -7,9 +7,9 @@ from typing import TypedDict
 
 import pandas as pd
 
-from .constantes import TS_A, TS_B, V_MAX, V_MIN
+from .constantes import LIMIAR_A, LIMIAR_B, V_MAX, V_MIN
 from .dados import Conexao, uma_linha
-from .modelagem import Modelagem, ordem_no_caso, sql_log
+from .modelagem import ORDEM, Modelagem, sql_log
 
 INICIO, FIM = "INÍCIO", "FIM"
 
@@ -19,13 +19,15 @@ Processos = dict[str, list[tuple[str, int]]]
 
 @dataclass(frozen=True)
 class Criterio:
+    """Critério de complexidade (eq. 2, 5 e 6 do artigo); os valores padrão são os do artigo."""
+
     v_min: int = V_MIN
     v_max: int = V_MAX
-    a: float = TS_A
-    b: float = TS_B
+    a: float = LIMIAR_A
+    b: float = LIMIAR_B
 
     def limiar(self, n_vertices: float) -> float:
-        """Sean, eq. 5: regressão sobre 219 modelos classificados por um especialista."""
+        """eq. 5: regressão linear da simplicidade sobre os modelos não complexos de uma base de 219."""
         return self.a * n_vertices + self.b
 
     def eh_complexo(self, n_vertices: int, n_arestas: int) -> bool:
@@ -33,11 +35,10 @@ class Criterio:
             return False
         if n_vertices > self.v_max:
             return True
-        # eq. 2: simplicidade = V/E
-        return n_vertices / n_arestas < self.limiar(n_vertices)
+        return n_vertices / n_arestas < self.limiar(n_vertices)  # eq. 2: simplicidade = V/E
 
 
-SEAN = Criterio()  # os valores do artigo
+CRITERIO_DO_ARTIGO = Criterio()
 
 
 class Metricas(TypedDict):
@@ -45,7 +46,7 @@ class Metricas(TypedDict):
     vertices: int
     arestas: int
     simplicidade: float
-    limiar_ts: float
+    limiar: float
     complexo: bool
 
 
@@ -56,35 +57,26 @@ class Modelo:
     casos: int
 
     @property
-    def n_vertices(self) -> int:
-        return len(self.vertices) + 2  # + INÍCIO e FIM, como no paper
-
-    @property
-    def n_arestas(self) -> int:
-        return len(self.arestas)
-
-    @property
     def vazio(self) -> bool:
         return self.vertices.empty
 
-    def metricas(self, criterio: Criterio = SEAN) -> Metricas | None:
+    def metricas(self, criterio: Criterio = CRITERIO_DO_ARTIGO) -> Metricas | None:
         if self.vazio:
             return None
-        v, e = self.n_vertices, self.n_arestas
+        v = len(self.vertices) + 2  # + INÍCIO e FIM, como no artigo
+        e = len(self.arestas)
         return Metricas(
             casos=self.casos,
             vertices=v,
             arestas=e,
             simplicidade=v / e,
-            limiar_ts=criterio.limiar(v),
+            limiar=criterio.limiar(v),
             complexo=criterio.eh_complexo(v, e),
         )
 
 
-def descobrir(
-    con: Conexao, m: Modelagem, datas: Sequence[date] | None = None
-) -> Modelo:
-    """Algoritmo 1 do Sean: frequência de cada atividade e de cada par consecutivo (com INÍCIO e FIM)."""
+def descobrir(con: Conexao, m: Modelagem, datas: Sequence[date] | None = None) -> Modelo:
+    """DFG: a frequência de cada atividade e de cada par de atividades seguidas (Algoritmo 1 do artigo)."""
     log = sql_log(m, datas)
     vertices = con.sql(f"""
         SELECT atividade, count(*) AS n FROM ({log}) GROUP BY atividade ORDER BY n DESC, atividade
@@ -95,7 +87,7 @@ def descobrir(
                    lag(atividade, 1, '{INICIO}') OVER janela AS anterior,
                    lead(atividade) OVER janela AS proxima
             FROM ({log})
-            WINDOW janela AS (PARTITION BY caso ORDER BY {ordem_no_caso(m)})
+            WINDOW janela AS (PARTITION BY caso ORDER BY {ORDEM})
         )
         SELECT de, para, count(*) AS n FROM (
             SELECT anterior AS de, atividade AS para FROM passos
@@ -108,9 +100,7 @@ def descobrir(
     return Modelo(vertices, arestas, int(n_casos))
 
 
-def processos_por_atividade(
-    con: Conexao, m: Modelagem, datas: Sequence[date] | None = None
-) -> Processos:
+def processos_por_atividade(con: Conexao, m: Modelagem, datas: Sequence[date] | None = None) -> Processos:
     """Os programas que disparam a regra de cada atividade, do que mais dispara pro que menos."""
     linhas = con.sql(f"""
         SELECT atividade, proc_name, count(*) AS n

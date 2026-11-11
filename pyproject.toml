@@ -29,10 +29,11 @@ dev = [
 ]
 
 [tool.pyright]
-# o app e o núcleo em modo strict; o resto (os notebooks) segue no standard, como no VS Code
-include = ["app.py", "util.py", "sean", "interface"]
+include = ["app.py", "util.py", "comiset", "interface"]
 typeCheckingMode = "standard"
-strict = ["app.py", "util.py", "sean", "interface"]
 pythonVersion = "3.12"
 venvPath = "."
 venv = ".venv"
+
+[tool.ruff]
+line-length = 120

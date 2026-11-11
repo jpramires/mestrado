@@ -53,11 +53,7 @@ def _valor(texto: str) -> str:
 def _atributos(atributos: Mapping[str, str]) -> str:
     if not atributos:
         return ""
-    return (
-        " ["
-        + " ".join(f"{chave}={_valor(valor)}" for chave, valor in atributos.items())
-        + "]"
-    )
+    return " [" + " ".join(f"{chave}={_valor(valor)}" for chave, valor in atributos.items()) + "]"
 
 
 @dataclass
@@ -98,9 +94,7 @@ def _rgb(cor: str) -> tuple[int, int, int]:
 
 
 def _misturar(c1: str, c2: str, t: float) -> str:
-    return "#" + "".join(
-        f"{round(a + (b - a) * t):02X}" for a, b in zip(_rgb(c1), _rgb(c2), strict=True)
-    )
+    return "#" + "".join(f"{round(a + (b - a) * t):02X}" for a, b in zip(_rgb(c1), _rgb(c2), strict=True))
 
 
 def _luminancia(cor: str) -> float:
@@ -113,9 +107,7 @@ def _intensidade(n: float, maximo: float) -> float:
     return math.log1p(n) / math.log1p(maximo) if maximo > 0 else 0
 
 
-def rotulo_atividade(
-    atividade: str, tipo: str, nomes: Mapping[str, str]
-) -> tuple[str, str]:
+def rotulo_atividade(atividade: str, tipo: str, nomes: Mapping[str, str]) -> tuple[str, str]:
     """(título, detalhe) de um vértice, conforme o que a atividade representa."""
     if tipo in ("technique", "technique_parent"):
         return nomes.get(atividade, atividade), atividade
@@ -143,23 +135,15 @@ def _rotulo_vertice(
     cor_suave: str,
 ) -> str:
     titulo, detalhe = rotulo_atividade(atividade, tipo, nomes)
-    linhas = [
-        f'<TR><TD ALIGN="LEFT"><B>{escape(parte)}</B></TD></TR>'
-        for parte in _linhas(titulo)
-    ]
+    linhas = [f'<TR><TD ALIGN="LEFT"><B>{escape(parte)}</B></TD></TR>' for parte in _linhas(titulo)]
     detalhe = f"{detalhe} ({fmt(n)})" if detalhe else fmt(n)  # como no Notebook 4
     linhas.append(_celula(escape(detalhe), cor_suave, "10"))
     if programas and top:
         linhas.append("<HR/>")
-        linhas += [
-            _celula(f"{escape(programa)}: {fmt(k)}", cor_suave, "9.5")
-            for programa, k in programas[:top]
-        ]
+        linhas += [_celula(f"{escape(programa)}: {fmt(k)}", cor_suave, "9.5") for programa, k in programas[:top]]
         resto = len(programas) - top
         if resto > 0:
-            texto = (
-                "+ 1 outro programa" if resto == 1 else f"+ {resto} outros programas"
-            )
+            texto = "+ 1 outro programa" if resto == 1 else f"+ {resto} outros programas"
             linhas.append(_celula(texto, cor_suave, "9.5"))
     tabela = f'<TABLE BORDER="0" CELLBORDER="0" CELLSPACING="0" CELLPADDING="1" COLOR="{cor_suave}">'
     return f"<{tabela}{''.join(linhas)}</TABLE>>"
@@ -169,9 +153,7 @@ def arestas_visiveis(modelo: Modelo, fracao: float) -> pd.DataFrame:
     """As arestas mais frequentes, `fracao` do total (pelo menos uma)."""
     if fracao >= 1 or modelo.arestas.empty:
         return modelo.arestas
-    return modelo.arestas.nlargest(
-        max(1, math.ceil(fracao * len(modelo.arestas))), "n", keep="first"
-    )
+    return modelo.arestas.nlargest(max(1, math.ceil(fracao * len(modelo.arestas))), "n", keep="first")
 
 
 def desenhar(
@@ -207,11 +189,7 @@ def desenhar(
         },
     )
     if titulo:
-        sub = (
-            f'<BR/><FONT POINT-SIZE="12" COLOR="{p["suave"]}">{escape(subtitulo)}</FONT>'
-            if subtitulo
-            else ""
-        )
+        sub = f'<BR/><FONT POINT-SIZE="12" COLOR="{p["suave"]}">{escape(subtitulo)}</FONT>' if subtitulo else ""
         grafo.grafo.update(
             label=f"<<B>{escape(titulo)}</B>{sub}>",
             labelloc="t",
@@ -245,9 +223,7 @@ def desenhar(
 
     contagens = [int(x) for x in modelo.vertices["n"]]
     maximo = max(contagens, default=0)
-    for atividade, n in zip(
-        (str(x) for x in modelo.vertices["atividade"]), contagens, strict=True
-    ):
+    for atividade, n in zip((str(x) for x in modelo.vertices["atividade"]), contagens, strict=True):
         if atividade not in tocados:  # sem nenhuma aresta visível: some do desenho
             continue
         fundo = _misturar(p["vertice_min"], p["vertice_max"], _intensidade(n, maximo))

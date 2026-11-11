@@ -1,4 +1,7 @@
-"""Constantes da replicação do Sean (Alvarenga et al., 2018) na COMISET, espelhando o Notebook 4."""
+"""Tabelas fixas do app: nomes do Sysmon, correção dos IDs de técnica, noções de caso e rótulos.
+
+As opções em `SEAN` são as escolhas de Alvarenga et al. (2018); os controles as marcam com "(Sean)".
+"""
 
 # https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon#events
 SYSMON: dict[int, str] = {
@@ -34,7 +37,7 @@ SYSMON: dict[int, str] = {
     255: "Error",
 }
 
-# ID sujo ou antigo -> ID atual (Notebook 4, §2)
+# ID sujo ou de versão antiga do ATT&CK -> ID atual (Notebook 4, §2)
 FIX: dict[str, str] = {
     "1210": "T1210",
     "Port Monitors": "T1547.010",
@@ -55,19 +58,20 @@ FIX: dict[str, str] = {
     "T1089": "T1189",  # ID diz Disabling Security Tools, nome diz Drive-by (T1189)
 }
 
-PADRAO = r"^T\d{4}(\.\d{3})?$"  # técnica válida: T1234 ou T1234.567
+TECNICA_VALIDA = r"^T\d{4}(\.\d{3})?$"  # T1234 ou T1234.567
 
-# Sean, eq. 5 (limiar ts = A·V + B) e eq. 6 (faixa de vértices)
+# critério de complexidade de Alvarenga et al. (2018): eq. 5 (limiar = A·V + B) e eq. 6 (faixa de V)
 V_MIN, V_MAX = 12, 25
-TS_A, TS_B = 0.0215, 0.0165
+LIMIAR_A, LIMIAR_B = 0.0215, 0.0165
 
 CENARIOS: dict[str, str] = {"lab": "LAB", "real": "REAL"}
 
-# nome -> (rótulo, valores aceitos do campo `initiated`; None = sem filtro de direção)
+# nome -> (rótulo, valores aceitos do campo `initiated`; None = sem filtro de direção).
+# Só os alertas de conexão de rede (EventID 3) têm direção: as três primeiras opções ficam só com eles.
 DIRECOES: dict[str, tuple[str, tuple[str, ...] | None]] = {
-    "entrada": ("Só entrada (Sean)", ("false",)),
-    "saida": ("Só saída", ("true",)),
-    "conexoes": ("Toda conexão", ("true", "false")),
+    "entrada": ("Só conexões de entrada", ("false",)),
+    "saida": ("Só conexões de saída", ("true",)),
+    "conexoes": ("Só conexões (os dois sentidos)", ("true", "false")),
     "todos": ("Todos os alertas", None),
 }
 
@@ -82,7 +86,7 @@ COLUNAS_CASO: dict[str, str] = {
     "tgt_proc_guid": "processo-alvo",
 }
 
-# Notebook 4, §5.2: nome -> (rótulo, colunas que formam o caso, se acrescenta o dia)
+# noções de caso prontas: nome -> (rótulo, colunas que formam o caso, se acrescenta o dia)
 AGREGACOES: dict[str, tuple[str, tuple[str, ...], bool]] = {
     "ip_origem": ("IP de origem", ("src_ip",), True),
     "ip_destino": ("IP de destino", ("dst_ip",), True),
@@ -108,3 +112,6 @@ CRITERIOS: dict[str, str] = {
     "casos": "Mais casos distintos",
     "eventos": "Mais eventos após o filtro",
 }
+
+# as escolhas de Alvarenga et al. (2018): noção de caso, direção, atividade e os critérios do dia
+SEAN = {"ip_origem", "entrada", "technique", "tecnicas", "alertas", "casos"}

@@ -1,4 +1,4 @@
-"""Uma modelagem = universo + caso + atividade + filtro. Tudo vira SQL sobre a view `alertas`."""
+"""Uma modelagem = universo + noção de caso + atividade + filtro. Tudo vira SQL sobre a view `alertas`."""
 
 from collections.abc import Iterable, Sequence
 from dataclasses import dataclass, replace
@@ -10,6 +10,8 @@ import pandas as pd
 from .constantes import AGREGACOES, DIRECOES, SYSMON
 from .dados import Conexao, sql_caso_quando, texto_sql, uma_linha
 
+ORDEM = "ts, ordem"  # ordem dos alertas dentro do caso: timestamp e, nos empates, a ordem do arquivo
+
 
 @dataclass(frozen=True)
 class Modelagem:
@@ -18,11 +20,10 @@ class Modelagem:
     caso: tuple[str, ...] = ("src_ip",)
     por_dia: bool = True
     atividade: str = "technique"
-    min_atividades: int = 2  # filtro do Sean: atividades distintas por caso
+    min_atividades: int = 2  # atividades distintas que um caso precisa ter para entrar no log
     excluir_tecnicas: tuple[str, ...] = ()
     event_ids: tuple[int, ...] = ()  # vazio = todos
     hosts: tuple[str, ...] = ()  # vazio = todos
-    desempate: tuple[str, ...] = ("ordem",)  # ordem dentro do caso, depois do ts
 
     def com_agregacao(self, nome: str) -> Self:
         _, colunas, por_dia = AGREGACOES[nome]
@@ -41,9 +42,7 @@ class Funil(TypedDict):
 
 
 def _lista(valores: Iterable[str | int]) -> str:
-    return ", ".join(
-        texto_sql(v) if isinstance(v, str) else str(int(v)) for v in valores
-    )
+    return ", ".join(texto_sql(v) if isinstance(v, str) else str(int(v)) for v in valores)
 
 
 def sql_atividade(atividade: str) -> str:
@@ -69,11 +68,10 @@ def sql_universo(m: Modelagem) -> str:
     if m.hosts:
         condicoes.append(f"host IN ({_lista(m.hosts)})")
 
-    partes = list(m.caso) + (["dia"] if m.por_dia else [])
-    # mesmo formato do Notebook 4: "10.10.117.130|18/11/2022"
-    caso = " || '|' || ".join(partes)
+    # o caso é a junção das colunas escolhidas, ex.: "10.10.117.130|18/11/2022"
+    caso = " || '|' || ".join(list(m.caso) + (["dia"] if m.por_dia else []))
     return f"""
-    SELECT {caso} AS caso, data, dia, ts, {", ".join(m.desempate)},
+    SELECT {caso} AS caso, data, dia, ts, ordem,
            {sql_atividade(m.atividade)} AS atividade,
            technique, technique_name, event_id, host, usr, proc_name, proc_guid,
            tgt_proc_name, src_ip, dst_ip, dst_port, initiated
@@ -83,7 +81,7 @@ def sql_universo(m: Modelagem) -> str:
 
 
 def sql_base(m: Modelagem) -> str:
-    """O universo, com quantas atividades distintas tem o caso de cada alerta (é o que o filtro do Sean olha)."""
+    """O universo, com quantas atividades distintas tem o caso de cada alerta."""
     return f"""
     SELECT *, count(DISTINCT atividade) OVER (PARTITION BY caso) AS atividades_no_caso
     FROM ({sql_universo(m)})
@@ -95,9 +93,9 @@ def _passa(m: Modelagem) -> str:
 
 
 def sql_log(m: Modelagem, datas: Sequence[date] | None = None) -> str:
-    """Event log: o universo depois do filtro do Sean, opcionalmente recortado em alguns dias.
+    """Event log: o universo depois do filtro de atividades, opcionalmente recortado em alguns dias.
 
-    O filtro olha o caso inteiro; o recorte vem depois (como na §5.3 do Notebook 4).
+    O filtro olha o caso inteiro; o recorte por dia vem depois.
     """
     condicoes = [_passa(m)]
     if datas:
@@ -105,15 +103,8 @@ def sql_log(m: Modelagem, datas: Sequence[date] | None = None) -> str:
     return f"SELECT * FROM ({sql_base(m)}) WHERE {' AND '.join(condicoes)}"
 
 
-def ordem_no_caso(m: Modelagem) -> str:
-    return "ts, " + ", ".join(m.desempate)
-
-
 def funil(con: Conexao, m: Modelagem) -> Funil:
-    """Quantos alertas sobram a cada etapa."""
-    (total,) = uma_linha(
-        con, f"SELECT count(*) FROM alertas WHERE cenario = {texto_sql(m.cenario)}"
-    )
+    (total,) = uma_linha(con, f"SELECT count(*) FROM alertas WHERE cenario = {texto_sql(m.cenario)}")
     universo, casos_antes, eventos, casos, atividades = uma_linha(
         con,
         f"""
@@ -134,7 +125,7 @@ def funil(con: Conexao, m: Modelagem) -> Funil:
 
 
 def por_dia(con: Conexao, m: Modelagem) -> pd.DataFrame:
-    """Por dia: alertas, casos e técnicas no universo (antes do filtro, como na §3.1) e eventos depois dele."""
+    """Por dia: alertas, casos e técnicas no universo (antes do filtro) e eventos depois dele."""
     return con.sql(f"""
         SELECT data, count(*) AS alertas, count(DISTINCT caso) AS casos, count(DISTINCT technique) AS tecnicas,
                count(*) FILTER ({_passa(m)}) AS eventos,
@@ -145,38 +136,27 @@ def por_dia(con: Conexao, m: Modelagem) -> pd.DataFrame:
 
 
 def dias_por_criterio(tabela_dias: pd.DataFrame) -> dict[str, date]:
-    """critério -> dia escolhido (o primeiro, em caso de empate)."""
+    """critério -> dia com mais daquilo (o primeiro, em caso de empate)."""
     if tabela_dias.empty:
         return {}
     datas = pd.to_datetime(tabela_dias["data"])
 
     def dia_com_mais(coluna: str) -> date:
-        return pd.Timestamp(
-            datas.iloc[int(tabela_dias[coluna].to_numpy().argmax())]
-        ).date()
+        return pd.Timestamp(datas.iloc[int(tabela_dias[coluna].to_numpy().argmax())]).date()
 
-    escolhidos = {
-        criterio: dia_com_mais(criterio)
-        for criterio in ["tecnicas", "alertas", "casos"]
-    }
+    escolhidos = {criterio: dia_com_mais(criterio) for criterio in ["tecnicas", "alertas", "casos"]}
     if tabela_dias["eventos"].to_numpy().max() > 0:
         escolhidos["eventos"] = dia_com_mais("eventos")
     return escolhidos
 
 
-def casos(
-    con: Conexao,
-    m: Modelagem,
-    datas: Sequence[date] | None = None,
-    max_trechos: int = 12,
-) -> pd.DataFrame:
-    """Um resumo por caso, com a sequência comprimida (repetições seguidas viram ×N), como a §5.4."""
-    ordem = ordem_no_caso(m)
+def casos(con: Conexao, m: Modelagem, datas: Sequence[date] | None = None, max_trechos: int = 12) -> pd.DataFrame:
+    """Um resumo por caso, com a sequência comprimida (repetições seguidas viram ×N)."""
     return con.sql(f"""
         WITH log AS ({sql_log(m, datas)}),
         passos AS (
             SELECT caso, atividade || '  ' || coalesce(proc_name, '?') AS passo,
-                   row_number() OVER (PARTITION BY caso ORDER BY {ordem}) AS i
+                   row_number() OVER (PARTITION BY caso ORDER BY {ORDEM}) AS i
             FROM log
         ),
         mudancas AS (
@@ -213,11 +193,7 @@ def casos(
 
 
 def eventos(
-    con: Conexao,
-    m: Modelagem,
-    datas: Sequence[date] | None = None,
-    caso: str | None = None,
-    limite: int = 5000,
+    con: Conexao, m: Modelagem, datas: Sequence[date] | None = None, caso: str | None = None, limite: int = 5000
 ) -> pd.DataFrame:
     """Linhas do event log (de um caso, se dado), na ordem usada pelo DFG."""
     filtro = f"WHERE caso = {texto_sql(caso)}" if caso is not None else ""
@@ -225,18 +201,16 @@ def eventos(
         SELECT caso, ts, atividade, technique, technique_name, event_id, proc_name, host, usr,
                src_ip, dst_ip, dst_port
         FROM ({sql_log(m, datas)}) {filtro}
-        ORDER BY caso, {ordem_no_caso(m)}
+        ORDER BY caso, {ORDEM}
         LIMIT {int(limite)}
     """).df()
 
 
-def exportar_log(
-    con: Conexao, m: Modelagem, datas: Sequence[date] | None = None
-) -> pd.DataFrame:
+def exportar_log(con: Conexao, m: Modelagem, datas: Sequence[date] | None = None) -> pd.DataFrame:
     """O event log inteiro (do recorte), pronto para baixar."""
     return con.sql(f"""
         SELECT caso AS "case", ts, dia, atividade AS activity, technique, technique_name,
                event_id, proc_name, host, usr, src_ip, dst_ip, dst_port
         FROM ({sql_log(m, datas)})
-        ORDER BY caso, {ordem_no_caso(m)}
+        ORDER BY caso, {ORDEM}
     """).df()
